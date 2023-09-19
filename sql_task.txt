@@ -1,0 +1,29 @@
+
+products{
+
+id char(5)
+
+name varchar(10)
+
+price double
+
+}
+
+
+customers{
+
+id int 
+
+name varchar(20)
+
+age double
+
+
+}
+
+
+
+1) fetch information of customers with name ambresh or ashish along with the products they are holding
+
+2) fetch information of customers with name starting from amb and age greater than 21
+
