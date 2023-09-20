@@ -37,7 +37,7 @@ Change structure of tables so that a customer can purchase multiple items, and a
 
 3) find count of number of customers who purchased samsung
 
-4) find the total money spent by customer
+4) find the total money spent by asish
 
 
 
