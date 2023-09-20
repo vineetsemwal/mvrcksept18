@@ -23,7 +23,22 @@ age double
 
 
 
-1) fetch information of customers with name ambresh or ashish along with the products they are holding
+1) fetch information of customers with name ambresh or ashish along with the product they are holding
 
 2) fetch information of customers with name starting from amb and age greater than 21
+
+
+Change structure of tables so that a customer can purchase multiple items, and a product can be purchased by multiple customers
+
+
+1) find details of all the customers who have purchased samsung
+
+2) find details of all products with are purchased by a customer with id 2  along with with the name of customer
+
+3) find count of number of customers who purchased samsung
+
+4) find the total money spent by customer
+
+
+
 
