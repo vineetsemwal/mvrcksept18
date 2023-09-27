@@ -1,0 +1,15 @@
+Product{
+long id
+
+double price
+
+increasePriceBy(double amount)
+
+
+}
+
+create array of products
+
+1) Add products to array
+
+2)iterate on array and print details of products
