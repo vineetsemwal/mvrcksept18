@@ -13,3 +13,5 @@ create array of products
 1) Add products to array
 
 2)iterate on array and print details of products
+
+3) find product by id and print details of product
