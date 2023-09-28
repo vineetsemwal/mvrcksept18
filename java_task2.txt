@@ -1,0 +1,11 @@
+Student{
+id: int
+name: String
+rollno:int
+changeName(newName)
+
+}
+
+create a client demo where create student store
+1)add studuent
+2)find student by id
