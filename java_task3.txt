@@ -1,0 +1,24 @@
+Create feedback application
+
+
+Customer{
+id: int
+name: String
+changeName(newName)
+
+}
+
+
+Feedback{
+id: int
+description: String
+customer : Customer
+
+}
+
+Create a feedback store and customer store
+1) add feedback in feedback store
+2) register customer in customer store
+3) fetch all feedbacks by customer id
+ 
+
