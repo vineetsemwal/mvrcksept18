@@ -24,7 +24,7 @@ roomType: String // deluxe or normal
 pricePerDay: double
 }
 
-HotelService{
+Hotel{
 name: String
 rooms: Room[]
 findGuestCheckedInRoom(roomId): Guest
