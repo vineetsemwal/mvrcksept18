@@ -11,6 +11,10 @@ public class Student {
         this.course=course;
     }
 
+    public Student(){
+        this(-1,"not initialized","not initialized");
+    }
+
     public int getId() {
         return id;
     }
