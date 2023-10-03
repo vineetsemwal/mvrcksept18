@@ -1,5 +1,8 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+package feedbackms.ui;
+
+import feedbackms.domain.*;
+import feedbackms.service.*;
+
 public class FeedbackTest {
     public static void main(String[] args) {
         FeedbackTest test = new FeedbackTest();
@@ -10,7 +13,7 @@ public class FeedbackTest {
     void runApp() {
         FeedbackApp feedbackApp = new FeedbackApp();
         Customer customer1 = feedbackApp.register2("archana");
-        int customer1Id = customer1.id;
+        int customer1Id = customer1.getId();
         Customer customer2 = feedbackApp.register2("anjali");
         Feedback feedback1 = feedbackApp.addFeedback2("very good", customer1);
         Feedback feedback2 = feedbackApp.addFeedback2("average", customer1);
@@ -26,7 +29,8 @@ public class FeedbackTest {
     }
 
     void display(Feedback feedback) {
-        System.out.println(feedback.id + "-" + feedback.description + "-cid" + feedback.customer.id + "-cname=" + feedback.customer.name);
+        Customer customer=feedback.getCustomer();
+        System.out.println(feedback.getId() + "-" + feedback.getDescription() + "-cid" + customer.getId() + "-cname=" + customer.getName());
     }
 
 
