@@ -1,0 +1,11 @@
+
+G
+java:S1197"*Move the array designators [] to the type.(â¡²ˆ8Á‰«¯1
+L	java:S106"+Replace this use of System.out by a logger.(êšÑ¢ıÿÿÿÿ8Ç‰«¯1
+G	java:S106"+Replace this use of System.out by a logger.(Úëã…8È‰«¯1
+L	java:S106"+Replace this use of System.out by a logger.(êšÑ¢ıÿÿÿÿ8È‰«¯1
+L	java:S106"+Replace this use of System.out by a logger.(ŞİÔ—şÿÿÿÿ8È‰«¯1
+p
+java:S6201#"NReplace this instanceof check and cast with 'instanceof CseStudent cseStudent'(Ê”Õøÿÿÿÿ8Ê‰«¯1
+p
+java:S6201'"NReplace this instanceof check and cast with 'instanceof EceStudent eceStudent'(Ü–ª·üÿÿÿÿ8Ê‰«¯1
