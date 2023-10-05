@@ -1,0 +1,11 @@
+
+`
+java:S1226">Introduce a new variable instead of reusing the parameter "i".(ÄÙµãþÿÿÿÿ8äù¯ò¯1
+F	java:S106	"+Replace this use of System.out by a logger.(’Ð÷8î£¯ò¯1
+G	java:S106
+"+Replace this use of System.out by a logger.(•˜¤õ8î£¯ò¯1
+F	java:S106"+Replace this use of System.out by a logger.(’Ð÷8ñ£¯ò¯1
+L	java:S106"+Replace this use of System.out by a logger.(Ðö¶žüÿÿÿÿ8ñ£¯ò¯1
+L	java:S106"+Replace this use of System.out by a logger.(êÍÖ„ÿÿÿÿÿ8¬ã±ò¯1
+L	java:S106"+Replace this use of System.out by a logger.(©ÇõÊýÿÿÿÿ8à‡³ò¯1
+L	java:S106"+Replace this use of System.out by a logger.(´öäÝþÿÿÿÿ8œÖ´ò¯1

@@ -29,3 +29,9 @@ P
  src/equalsdemo/CustomerTest.java,8\0\80ba14576c57dedd975c858bcbdefaacbca31a71
 L
 src/equalsdemo/Customer.java,1\b\1bd6be4c9ef880aea30fc46d508c8556fd7b7507
+J
+src/ref/RefExperiment.java,4\8\487976c833d8c09d17e5d0e098b115d82de75ff7
+D
+src/ref/Student.java,b\1\b19e03ebc0372d7883068c91f460a207264738ba
+R
+"src/wrapperdemos/WrapperDemo1.java,e\f\efeb5f1d107f5460935c50981087082abdff9aea

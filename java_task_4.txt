@@ -42,14 +42,22 @@ rooms: Room[]
 com.mavericapps.hotelms.service
 interface
 IHotelService{
+addHotel(hotelname): Hotel
+addRoom(hotelId, floor,roomType,price)
 findGuestCheckedInRoom(hotelId,roomId): Guest
 guestsCount(hotelId): int
 earningToday(hotelId): double // add prices of rooms where guest is staying
 findAllGuests(hotelId): Guest[]
+checkin(hotelId, roomId,firstName, lastName): Guest
 }
+
+
+
+
 
 create service implementation , keep hotel service implementation
 HotleServiceImpl implements IHotelService{
+
 ----
 ----
 }
