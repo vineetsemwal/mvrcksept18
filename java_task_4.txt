@@ -49,6 +49,7 @@ guestsCount(hotelId): int
 earningToday(hotelId): double // add prices of rooms where guest is staying
 findAllGuests(hotelId): Guest[]
 checkin(hotelId, roomId,firstName, lastName): Guest
+checkout(hotelId,guestId): void
 }
 
 
