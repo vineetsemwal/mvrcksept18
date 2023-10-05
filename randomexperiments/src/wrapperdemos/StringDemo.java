@@ -21,15 +21,13 @@ public class StringDemo {
         System.out.println("replace all a=" + replacedResult);
         int aIndex = city.indexOf('a');
         //replacing only first occurence
-        //   String start=city.substring(0,aIndex);
-        //   String end="c"+city.substring(aIndex+1);
-        //  String result=start+end;
-        // same can be done by using stringbuilder
         StringBuilder stringBuilder = new StringBuilder(city);
         stringBuilder.setCharAt(aIndex, 'c');
         String resultWithFirstAChanged = stringBuilder.toString();
         System.out.println("replace first occurence of a="+resultWithFirstAChanged);
-
+        //replace only first occurence with replaceFirst(*) method
+        String replaceWithFirstAChanged2=city.replaceFirst("a","c");
+        System.out.println("replace first occurence of a="+replaceWithFirstAChanged2);
 
     }
 }
