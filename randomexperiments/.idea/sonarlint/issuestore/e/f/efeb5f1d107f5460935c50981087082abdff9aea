@@ -1,13 +1,0 @@
-
-U
-java:S1854	"8Remove this useless assignment to local variable "num2".(ßœúà8ëàõ¯1
-U
-java:S1854"8Remove this useless assignment to local variable "num1".(‹­›Ö8ëàõ¯1
-F
-java:S1481")Remove this unused "num1" local variable.(‹­›Ö8ëàõ¯1
-F
-java:S1481	")Remove this unused "num2" local variable.(ßœúà8ëàõ¯1
-L	java:S106"+Replace this use of System.out by a logger.(öÔ ğüÿÿÿÿ8ìåéõ¯1
-L	java:S106"+Replace this use of System.out by a logger.(Åº±èúÿÿÿÿ8åÕùõ¯1
-M
-java:S1172"+Remove this unused method parameter "name".(Ã©§ıÿÿÿÿ8‘ëàõ¯1

@@ -44,11 +44,11 @@ interface
 IHotelService{
 addHotel(hotelname): Hotel
 addRoom(hotelId, floor,roomType,price)
-findGuestCheckedInRoom(hotelId,roomId): Guest
+findGuestCheckedInRoom(hotelId,roomNumber): Guest
 guestsCount(hotelId): int
 earningToday(hotelId): double // add prices of rooms where guest is staying
 findAllGuests(hotelId): Guest[]
-checkin(hotelId, roomId,firstName, lastName): Guest
+checkin(hotelId, roomNumber,firstName, lastName): Guest
 checkout(hotelId,guestId): void
 }
 

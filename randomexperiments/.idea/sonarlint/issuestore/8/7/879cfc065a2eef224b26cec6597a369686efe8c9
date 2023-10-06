@@ -1,0 +1,14 @@
+
+X
+java:S1854"6Remove this useless assignment to local variable "ch".(Íä˜ìøÿÿÿÿ8Ììÿú¯1
+I
+java:S1481"'Remove this unused "ch" local variable.(Íä˜ìøÿÿÿÿ8Îìÿú¯1
+]	java:S125"<This block of commented-out lines of code should be removed.(‡„œ¶üÿÿÿÿ8Îìÿú¯1
+L	java:S106	"+Replace this use of System.out by a logger.(«ùˆœüÿÿÿÿ8Îìÿú¯1
+L	java:S106"+Replace this use of System.out by a logger.(ÜæÿÕûÿÿÿÿ8Ïìÿú¯1
+G	java:S106"+Replace this use of System.out by a logger.(´ÿëí8Ïìÿú¯1
+L	java:S106"+Replace this use of System.out by a logger.(Ç®âÔùÿÿÿÿ8Ïìÿú¯1
+X	java:S125"<This block of commented-out lines of code should be removed.(ï±¼8Ğìÿú¯1
+G	java:S106"+Replace this use of System.out by a logger.(ÚÉ—°8Ğìÿú¯1
+L	java:S106"+Replace this use of System.out by a logger.(§´şÿÿÿÿ8Ñìÿú¯1
+L	java:S106"+Replace this use of System.out by a logger.(õ×ğÿÿÿÿÿ8´¡û¯1
