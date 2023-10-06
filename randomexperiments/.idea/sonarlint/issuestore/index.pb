@@ -35,3 +35,9 @@ D
 src/ref/Student.java,b\1\b19e03ebc0372d7883068c91f460a207264738ba
 R
 "src/wrapperdemos/WrapperDemo1.java,e\f\efeb5f1d107f5460935c50981087082abdff9aea
+W
+'src/wrapperdemos/StringBuilderDemo.java,6\e\6ea7862a0da35ad2c2096f5ca167ad5ed0d7a0d8
+P
+ src/wrapperdemos/StringDemo.java,8\7\879cfc065a2eef224b26cec6597a369686efe8c9
+O
+src/wrapperdemos/RegexDemo.java,0\2\0291a9f142543d590c66eb93b13bbeed6d3c6600
