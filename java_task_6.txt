@@ -1,0 +1,41 @@
+A company wants to manage projects 
+
+Employee{
+
+id : int
+firstName: String
+lastName:String
+projectsWorkingOn: List<Project>
+}
+
+Project{
+id: int
+name: String
+technologiesUsed:List<String>
+}
+
+IEmployeeService{
+// keep employee store List<Employee>
+registerEmployee(firstName, lastName)
+findEmployeeById(eid)
+findEmployeesAscByFirstName(): List<Employee>
+
+}
+
+IProjectService{
+// keep project store List<Project>
+addProject(projectName, Collection<String> technologies):Project
+findProjectById(pid):Project
+assignProject(projectId, employeeId):void
+findEmployeesWorkingOnProjectInAscFirstName(projectId):List<Employee>
+}
+
+Validations
+
+projectName should be between 2 and 10 chars
+firstName between 3 and 10 chars
+lastName between 3 and 10 chars
+employee id should be greater than zero
+project id should be greater than zero
+
+
