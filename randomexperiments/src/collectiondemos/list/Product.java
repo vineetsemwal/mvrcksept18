@@ -41,4 +41,9 @@ public class Product implements Comparable<Product>{
     public int compareTo(Product o) {
         return (id-o.id);
     }
+
+    @Override
+    public String toString() {
+        return "product-"+ id+"-"+name;
+    }
 }

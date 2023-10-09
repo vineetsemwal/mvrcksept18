@@ -2,12 +2,13 @@ package collectiondemos.list;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ArrayListx1 {
     public static void main(String[] args) {
         ArrayListx1 demo=new ArrayListx1();
-        List<Product> list = new ArrayList();
+        List<Product> list = new ArrayList<>();
         list.add(new Product(3, "iphone"));
         list.add(new Product(1, "moto"));
         list.add(new Product(2, "samsung"));
