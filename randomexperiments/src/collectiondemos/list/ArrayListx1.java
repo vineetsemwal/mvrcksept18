@@ -1,6 +1,7 @@
 package collectiondemos.list;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayListx1 {
@@ -30,6 +31,14 @@ public class ArrayListx1 {
         for (Product iterated:list){
             demo.display(iterated);
         }
+
+       // Collections.sort(list);
+        list.sort(new ProductNameComparatorDescending());
+        System.out.println("***displaying list after sorting on id");
+        for (Product iterated:list){
+            demo.display(iterated);
+        }
+
 
     }
     void display(Product product){

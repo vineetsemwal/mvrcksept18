@@ -1,6 +1,6 @@
 package collectiondemos.list;
 
-public class Product {
+public class Product implements Comparable<Product>{
     private int id;
     private String name;
 
@@ -35,5 +35,10 @@ public class Product {
         }
         Product that=(Product) obj;
         return that.id==id;
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return (id-o.id);
     }
 }
