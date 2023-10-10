@@ -2,15 +2,15 @@ package collectiondemos.map;
 
 import collectiondemos.Product;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
-public class MapEx1 {
+public class MapEx2 {
     public static void main(String[] args) {
-        MapEx1 demo=new MapEx1();
-        Map<Integer, Product>store=new LinkedHashMap<>();
+        MapEx2 demo=new MapEx2();
+        Map<Integer, Product> store=new TreeMap<>(new IdKeyComparator());
         Product samsung=new Product(3,"samsung");
         store.put(samsung.getId(),samsung);
         Product moto=new Product(1,"moto");
