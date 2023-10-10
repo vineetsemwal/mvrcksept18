@@ -1,5 +1,7 @@
 package collectiondemos.list;
 
+import collectiondemos.Product;
+
 import java.util.Comparator;
 
 public class ProductNameComparatorAscending implements Comparator<Product> {

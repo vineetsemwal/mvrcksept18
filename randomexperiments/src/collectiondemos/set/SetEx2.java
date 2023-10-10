@@ -1,9 +1,8 @@
 package collectiondemos.set;
 
-import collectiondemos.list.Product;
+import collectiondemos.Product;
 import collectiondemos.list.ProductNameComparatorAscending;
 
-import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 

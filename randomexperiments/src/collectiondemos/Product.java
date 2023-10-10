@@ -1,4 +1,4 @@
-package collectiondemos.list;
+package collectiondemos;
 
 public class Product implements Comparable<Product>{
     private int id;
