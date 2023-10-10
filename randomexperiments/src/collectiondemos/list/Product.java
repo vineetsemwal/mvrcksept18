@@ -26,6 +26,11 @@ public class Product implements Comparable<Product>{
     }
 
     @Override
+    public int hashCode() {
+        return  id;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if(obj==this){
             return true;

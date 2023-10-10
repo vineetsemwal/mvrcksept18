@@ -29,11 +29,6 @@ public class LinkedListEx1 {
         demo.display(firstElement2);
         System.out.println("**** deq size after peek="+deq.size());
 
-
-
-
-
-
     }
     void display(Product product){
         System.out.println("product-"+product.getId()+"-"+product.getName());
