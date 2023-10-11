@@ -1,0 +1,57 @@
+
+A company wants to create an internal Customer management system for its customers
+Below are the details 
+
+Customer{
+id: Integer
+firstName: String
+lastName: String
+}
+
+Interface/ Contract
+ICustomerService{
+register(firstName, lastName): Customer
+findById(id) : Customer
+// find customers by firstName, 
+findCustomersByFirstNameAscendingId(firstName):List<Customer> 
+}
+
+Create the Service implementation , Use Map as in memory store Map<Integer, Customer>
+
+
+User Stories
+1)	Register a customer and display details of registered customer , if firstName or lastName is invalid, Display invalid Name
+
+
+Acceptance Criteria
+ 	If firstName is not  between 2 and 10 letters then display invalid name 
+If lastName should be between 2 and 10 letters then display invalid name
+             If customer is successfully registered display customer details in below format  
+             customer: id=10,firstName=sampath, lastName=kumar
+
+
+
+2)	Find customer by id 
+If customer is found by id then display customer details to HR executive 
+
+Acceptance Criteria
+1)	If id is smaller than 1 then display invalid id to HR executive
+2)	If customer is not found then display “customer not found” to HR executive
+3)	If customer is found then display customer details in below format
+Result when customer with id 10 is searched
+customer: id=10,firstName=sampath, lastName=kumar
+
+
+3)	Find list of customers starting with text sach, returned customers should be ordered by id
+
+Acceptance Criteria
+Display details in the below format
+
+If text is less than 3 letters then display  “insufficient text for search” 
+If no customer is found for search then display “no customer found”
+Customer Details display format when searched for text sach
+
+customer: id=10,firstName=sampath, lastName=kumar
+customer:id=20,firstName=mahesh, lastName=reddy
+
+
