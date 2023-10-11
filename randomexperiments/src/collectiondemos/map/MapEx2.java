@@ -34,7 +34,7 @@ public class MapEx2 {
 
         System.out.println("**** iterating entries");
         Set<Map.Entry<Integer,Product>>entries=store.entrySet();
-        for (Map.Entry<Integer,Product>entry:entries ){
+        for (var entry:entries ){
             System.out.println("key="+entry.getKey());
             Product value=entry.getValue();
             demo.display(value);

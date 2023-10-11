@@ -15,7 +15,7 @@ technologiesUsed:List<String>
 }
 
 IEmployeeService{
-// keep employee store List<Employee>
+// keep employee store Map<Employee>
 registerEmployee(firstName, lastName)
 findEmployeeById(eid)
 findEmployeesAscByFirstName(): List<Employee>
