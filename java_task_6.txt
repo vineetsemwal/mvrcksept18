@@ -23,7 +23,8 @@ findEmployeesAscByFirstName(): List<Employee>
 }
 
 IProjectService{
-// keep project store List<Project>
+// keep project store Map<Integer,Project>
+//
 addProject(projectName, Collection<String> technologies):Project
 findProjectById(pid):Project
 assignProject(projectId, employeeId):void
