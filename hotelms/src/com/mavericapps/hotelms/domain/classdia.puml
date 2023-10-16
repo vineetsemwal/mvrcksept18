@@ -1,27 +1,39 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+Hotel "1" *-- "many" Room
+Room "1" --"1" Guest
+class Guest {
+-id
+-firstName
+-lastName
+-email
++getId()
++getName()
++setFirstName(name)
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Hotel{
+-id:long
+-name:String
+-rooms:Room[]
++getName():String
++getRooms():Room[]
+}
+
+class Room{
+-roomNumber: int
+-floor:int
+-checkedIn:Guest
++getroomNo():int
++getFloor():int
++getCheckedIn():Guest
+}
+
+enum RoomType {
+Deluxe,
+Standard
 }
 
 @enduml

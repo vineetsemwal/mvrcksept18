@@ -1,2 +1,7 @@
-package com.maveric.customerms.dao;public class iCustomerDao {
+package com.maveric.customerms.dao;
+
+import com.maveric.customerms.domain.Customer;
+
+public interface ICustomerDao {
+    Customer save(Customer customer);
 }

@@ -7,5 +7,8 @@ public enum RoomType {
     RoomType(double pricePerDay){
         this.pricePerDay=pricePerDay;
     }
+    double getPricePerDay(){
+        return pricePerDay;
+    }
 
 }

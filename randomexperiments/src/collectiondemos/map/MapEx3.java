@@ -3,20 +3,19 @@ package collectiondemos.map;
 import collectiondemos.Product;
 
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class MapEx3 {
-    Map<Integer, Product> store = new TreeMap<>(new ProductNameComparison());
+    Map<Integer, Product> sortedStore = new TreeMap<>(new ProductNameComparison());
+    Map<Integer, Product> backup = new HashMap<>();
 
     class ProductNameComparison implements Comparator<Integer> {
         @Override
         public int compare(Integer key1, Integer key2) {
-            Product value1 = store.get(key1);
-            Product value2 = store.get(key2);
-
-            System.out.println("key1=" + key1 + "value1=" + value1);
-            System.out.println("key2=" + key2 + "value2=" + value2);
+            Product value1 = backup.get(key1);
+            Product value2 = backup.get(key2);
             return value1.getName().compareTo(value2.getName());
         }
     }
@@ -28,20 +27,23 @@ public class MapEx3 {
     }
 
     void displayAll() {
-        for (int key : store.keySet()) {
-            Product value = store.get(key);
+        for (int key : sortedStore.keySet()) {
+            Product value = sortedStore.get(key);
             display(value);
         }
     }
 
     void runApp() {
         Product samsung = new Product(3, "samsung");
-        store.put(samsung.getId(), samsung);
+        backup.put(samsung.getId(), samsung);
         Product moto = new Product(1, "moto");
-        store.put(moto.getId(), moto);
+        backup.put(moto.getId(), moto);
         Product iphone = new Product(5, "iphone");
-        store.put(iphone.getId(), iphone);
+        backup.put(iphone.getId(), iphone);
+        sortedStore.putAll(backup);
+
         displayAll();
+
 
     }
 
