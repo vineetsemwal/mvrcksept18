@@ -9,11 +9,13 @@ public class GoodFileCopy {
             File outFile=new File("C:/Users/vineets/work/ioexp/file2.mp4");
             InputStream inputStream = new FileInputStream(inputFile);
             OutputStream outputStream=new FileOutputStream(outFile);
+            InputStream bufferedInputStream=new BufferedInputStream(inputStream);
+            OutputStream bufferedOutputStream=new BufferedOutputStream(outputStream);
             byte[]buffer=new byte[100];
             int bytesRed;
             int bytesCount=0;
-            while ((bytesRed=inputStream.read(buffer))>0){
-                outputStream.write(buffer,0,bytesRed);
+            while ((bytesRed=bufferedInputStream.read(buffer))>0){
+                bufferedOutputStream.write(buffer,0,bytesRed);
                 bytesCount=bytesCount+bytesRed;
             }
             outputStream.flush();
