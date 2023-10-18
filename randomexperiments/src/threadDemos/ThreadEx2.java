@@ -2,7 +2,8 @@ package threadDemos;
 
 public class ThreadEx2 {
     public static void main(String[] args) throws Exception{
-        Thread thread1=new Thread(new RenderNumbers("thread1"));
+        Runnable runnable1=new RenderNumbers("thread1");
+        Thread thread1=new Thread(runnable1);
         Thread thread2=new Thread(new RenderNumbers("thread2"));
         thread1.start();
         thread2.start();

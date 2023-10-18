@@ -1,11 +1,11 @@
 
 `
-java:S1226">Introduce a new variable instead of reusing the parameter "i".(ÄÙµãşÿÿÿÿ8äù¯ò¯1
-F	java:S106	"+Replace this use of System.out by a logger.(’Ğ÷8î£¯ò¯1
-G	java:S106
-"+Replace this use of System.out by a logger.(•˜¤õ8î£¯ò¯1
-F	java:S106"+Replace this use of System.out by a logger.(’Ğ÷8ñ£¯ò¯1
-L	java:S106"+Replace this use of System.out by a logger.(Ğö¶üÿÿÿÿ8ñ£¯ò¯1
-L	java:S106"+Replace this use of System.out by a logger.(êÍÖ„ÿÿÿÿÿ8¬ã±ò¯1
-L	java:S106"+Replace this use of System.out by a logger.(©ÇõÊıÿÿÿÿ8à‡³ò¯1
-L	java:S106"+Replace this use of System.out by a logger.(´öäİşÿÿÿÿ8œÖ´ò¯1
+java:S1226">Introduce a new variable instead of reusing the parameter "i".(ÄÙµãşÿÿÿÿ8ã­ğÇ²1
+F	java:S106
+"+Replace this use of System.out by a logger.(’Ğ÷8í­ğÇ²1
+G	java:S106"+Replace this use of System.out by a logger.(•˜¤õ8í­ğÇ²1
+F	java:S106"+Replace this use of System.out by a logger.(’Ğ÷8î­ğÇ²1
+L	java:S106"+Replace this use of System.out by a logger.(Ğö¶üÿÿÿÿ8î­ğÇ²1
+L	java:S106"+Replace this use of System.out by a logger.(êÍÖ„ÿÿÿÿÿ8ğ­ğÇ²1
+L	java:S106"+Replace this use of System.out by a logger.(©ÇõÊıÿÿÿÿ8ñ­ğÇ²1
+L	java:S106"+Replace this use of System.out by a logger.(´öäİşÿÿÿÿ8ñ­ğÇ²1
