@@ -9,8 +9,12 @@ public class ThreadEx2 {
         thread2.start();
         for (int i=0;i<5;i++){
             System.out.println("main-i="+i);
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         }
+        thread1.join();
+        thread2.join();
+        System.out.println("bye main finished");
+
     }
 
     private static class RenderNumbers implements Runnable{
