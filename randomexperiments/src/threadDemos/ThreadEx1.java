@@ -21,7 +21,7 @@ public class ThreadEx1 {
         public void run() {
             try{
             for (int i=0;i<5;i++) {
-                System.out.println("thread="+getName()+",i=0");
+                System.out.println("thread="+getName()+",i="+i);
                 Thread.sleep(5000);
             }
             }catch (Exception e){

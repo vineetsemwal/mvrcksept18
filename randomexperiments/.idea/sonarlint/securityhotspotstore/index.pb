@@ -139,3 +139,9 @@ N
 src/threadDemos/ThreadEx1.java,0\c\0cc551a6d11c7829dc0f165cb7d58dac41b71083
 N
 src/threadDemos/ThreadEx2.java,1\9\1955369154bb3e89f7c9da2249553300e6548429
+X
+(src/threadDemos/BeautifulGreetingEx.java,c\f\cf27a41fc26e43675ae242ac4c4cfbcc59154e1b
+Y
+)src/threadDemos/ProducerConsumerFlaw.java,0\2\027407a92df04e39331f9da0a6a8954030277531
+Z
+*src/threadDemos/ProducerConsumerFixed.java,f\7\f7af6abff4cf78e37dc297475661276873d0d2d4
