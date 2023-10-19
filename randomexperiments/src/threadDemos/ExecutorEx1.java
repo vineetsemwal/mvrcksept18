@@ -3,13 +3,16 @@ package threadDemos;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class ExecutorEx1 {
     public static void main(String[] args) {
-        //ExecutorService service = Executors.newFixedThreadPool(1);
-        ExecutorService service=Executors.newCachedThreadPool();
-        service.execute(new RenderNumbers());
-        service.execute(new RenderNumbers());
+        //ExecutorService service = Executors.newFixedThreadPool(2);
+        // ExecutorService service=Executors.newCachedThreadPool();
+        // ExecutorService service = Executors.newSingleThreadExecutor();
+        //service.execute(new RenderNumbers());
+        ScheduledExecutorService service =Executors.newScheduledThreadPool(2);
+        service.schedule(new RenderNumbers(),10,TimeUnit.SECONDS);
         service.shutdown();
     }
 
