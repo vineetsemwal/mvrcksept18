@@ -17,6 +17,7 @@ public class FutureEx1 {
         List<Employee>list=future.get();
         System.out.println("task finished="+future.isDone());
         System.out.println("fetched employees="+list);
+        service.shutdown();
     }
     private static class FileReaderTask implements Callable<List<Employee>> {
         @Override
