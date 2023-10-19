@@ -1,15 +1,9 @@
 package threadDemos;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.ResourceBundle;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Future;
 import java.util.function.Supplier;
 
-public class CompleteableFutureEx1 {
+public class CompletableFutureEx1 {
 
     public static void main(String[] args) throws Exception {
         CompletableFuture<String> future = CompletableFuture.supplyAsync(new ReadFileTask());
