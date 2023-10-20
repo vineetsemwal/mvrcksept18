@@ -1,0 +1,22 @@
+A company requires to process a file containing employee infos in below format and create a new file in the below format where employees are kept in sorted order by id
+
+
+
+original file
+id1, name1, salary1, department1, address1
+id2, name2, salary2, department2, address2
+
+convertedfile
+id1, name1, salary1
+id2, name2, salary2
+
+
+Employee{
+id: int
+name: String
+dept: String
+address: String
+}
+
+
+
