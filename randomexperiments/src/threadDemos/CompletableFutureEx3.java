@@ -5,6 +5,7 @@ import java.util.function.BiFunction;
 import java.util.function.Supplier;
 
 public class CompletableFutureEx3 {
+
     public static void main(String[] args)throws Exception {
         CompletableFuture<String>future=CompletableFuture.supplyAsync(new OriginalTask());
         CompletableFuture<String>resultFuture=future.handleAsync(new HandlerTask());
