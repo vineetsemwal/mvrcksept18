@@ -15,6 +15,12 @@ public class PredicateEx1 {
         BiPredicate<Integer,Integer>sumEven=(input1,input2)->(input1+input2)%2==0;
         boolean result3=sumEven.test(3,5);
         System.out.println("result3="+result3);
+
+        Util util=new Util();
+        boolean result4=util.isSumEven(5,6);
+        System.out.println("result4="+result4);
+        boolean result5=util.isTest(sumEven,8,9);
+        System.out.println("result5="+result5);
     }
     @FunctionalInterface
     private static interface IEvenChecker{
