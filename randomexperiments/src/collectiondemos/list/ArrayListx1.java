@@ -3,6 +3,7 @@ package collectiondemos.list;
 import collectiondemos.Product;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ArrayListx1 {
@@ -34,7 +35,14 @@ public class ArrayListx1 {
         }
 
        // Collections.sort(list);
-        list.sort(new ProductNameComparatorDescending());
+       // list.sort(new ProductNameComparatorDescending());
+        Comparator<Product>nameComparator=(product1,product2)->{
+            String name1=product1.getName();
+            String name2= product2.getName();
+            int compareResult=name2.compareTo(name1);
+            return compareResult;
+        };
+        list.sort(nameComparator);
         System.out.println("***displaying list after sorting on id");
         for (Product iterated:list){
             demo.display(iterated);
