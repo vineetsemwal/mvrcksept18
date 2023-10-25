@@ -23,7 +23,7 @@ public class ConsumerEx1 {
             }
             System.out.println("result="+result);
         };
-        concatTimes.accept("nangalore",3);
+        concatTimes.accept("bangalore",3);
     }
 
     private static interface IPrint{
