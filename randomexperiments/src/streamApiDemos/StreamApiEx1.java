@@ -1,9 +1,7 @@
 package streamApiDemos;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -22,8 +20,8 @@ public class StreamApiEx1 {
         List<List<Employee>> departments = new ArrayList<>();
         departments.add(testDepartment);
         departments.add(devDepartment);
-        StreamApiEx1 demo=new StreamApiEx1();
-        long count=demo.allEmployeesCount(departments);
+        StreamApiEx1 demo = new StreamApiEx1();
+        long count = demo.allEmployeesCount(departments);
     }
 
     //keep only strings starting from a
@@ -87,6 +85,18 @@ public class StreamApiEx1 {
         long count = finalStream.count();
         return count;
 
+    }
+
+
+    void addLengthOfAllText(Collection<String> collection) {
+        Stream<Integer> integerStream = collection.stream()
+                .map(text -> text.length());
+        BinaryOperator<Integer> operator = (len1, len2) -> len1 + len2;
+        Optional<Integer> optional = integerStream.reduce(operator);
+        if (optional.isPresent()){
+            int total=optional.get();
+            System.out.println("total ="+total);
+        }
     }
 
     private static class Employee {
