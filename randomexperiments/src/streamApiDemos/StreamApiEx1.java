@@ -5,6 +5,7 @@ import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -113,6 +114,28 @@ public class StreamApiEx1 {
 
         System.out.println("result=" + result);
     }
+
+    void collect1(Collection<String> collection) {
+        List<String> list = collection.stream()
+                .collect(Collectors.toList());
+
+    }
+
+    public void collect2(Collection<String> collection) {
+
+        Set<String> set = collection.stream()
+                .collect(Collectors.toSet());
+    }
+/*
+    Map<Integer,Employee>
+ */
+    public void collect3(Collection<Employee> collection) {
+        Function<Employee, Integer> keyMapper = employee -> employee.id;
+        Function<Employee, String> valueMapper = employee -> employee.name;
+        Map<Integer, String> map = collection.stream().collect(Collectors.toMap(keyMapper, valueMapper));
+
+    }
+
 
     private static class Employee {
         private int id;
