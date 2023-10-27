@@ -22,6 +22,10 @@ public class StreamApiEx1 {
         departments.add(devDepartment);
         StreamApiEx1 demo = new StreamApiEx1();
         long count = demo.allEmployeesCount(departments);
+        List<String> list = new ArrayList<>();
+        list.add("abc");
+        list.add("de");
+        demo.multiplyLengthOfAllText(list);
     }
 
     //keep only strings starting from a
@@ -89,16 +93,25 @@ public class StreamApiEx1 {
 
 
     void addLengthOfAllText(Collection<String> collection) {
-        BinaryOperator<Integer>operator=(len1,len2)->len1+len2;
-   Optional<Integer>optional=   collection.stream()
-               .map(text->text.length())
-              .reduce(operator);
-              if(optional.isPresent()){
-                 Integer total= optional.get();
-                  System.out.println("combined length="+total);
-              }
+        BinaryOperator<Integer> operator = (len1, len2) -> len1 + len2;
+        Optional<Integer> optional = collection.stream()
+                .map(text -> text.length())
+                .reduce(operator);
+        if (optional.isPresent()) {
+            Integer total = optional.get();
+            System.out.println("combined length=" + total);
+        }
 
+    }
 
+    void multiplyLengthOfAllText(Collection<String> collection) {
+        BinaryOperator<Integer> operator = (len1, len2) -> len1 * len2;
+        Integer identity = 1;
+        int result = collection.stream()
+                .map(text -> text.length())
+                .reduce(identity, operator);
+
+        System.out.println("result=" + result);
     }
 
     private static class Employee {
