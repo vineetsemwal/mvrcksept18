@@ -1,5 +1,7 @@
 package fiLambda;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
@@ -24,6 +26,16 @@ public class ConsumerEx1 {
             System.out.println("result="+result);
         };
         concatTimes.accept("bangalore",3);
+
+
+        List<String>list=new ArrayList<>();
+        list.add("bhavita");
+        list.add("kushal");
+        Consumer<String>lenConsumer=str->{
+            int length=str.length();
+            System.out.println("value="+str+",length="+length);
+        };
+        list.forEach(lenConsumer);
     }
 
     private static interface IPrint{

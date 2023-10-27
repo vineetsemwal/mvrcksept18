@@ -89,14 +89,16 @@ public class StreamApiEx1 {
 
 
     void addLengthOfAllText(Collection<String> collection) {
-        Stream<Integer> integerStream = collection.stream()
-                .map(text -> text.length());
-        BinaryOperator<Integer> operator = (len1, len2) -> len1 + len2;
-        Optional<Integer> optional = integerStream.reduce(operator);
-        if (optional.isPresent()){
-            int total=optional.get();
-            System.out.println("total ="+total);
-        }
+        BinaryOperator<Integer>operator=(len1,len2)->len1+len2;
+   Optional<Integer>optional=   collection.stream()
+               .map(text->text.length())
+              .reduce(operator);
+              if(optional.isPresent()){
+                 Integer total= optional.get();
+                  System.out.println("combined length="+total);
+              }
+
+
     }
 
     private static class Employee {
