@@ -1,0 +1,7 @@
+
+^
+java:S1854"<Remove this useless assignment to local variable "listener".(•É–şüÿÿÿÿ8Åõ½½³1
+G	java:S106"+Replace this use of System.out by a logger.(¿Åğ¯8ÕÕ½³1
+O
+java:S1481"-Remove this unused "listener" local variable.(•É–şüÿÿÿÿ8Èõ½½³1
+X	java:S125"<This block of commented-out lines of code should be removed.(À¶ñğ8ªÊÔ½³1

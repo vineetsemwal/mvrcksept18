@@ -1,0 +1,10 @@
+
+J
+java:S1604"(Make this anonymous inner class a lambda(Â‘ëËüÿÿÿÿ8«âì°¶1
+€
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "result".(ƒä”Ùúÿÿÿÿ8¬âì°¶1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡ÛÂ8¬âì°¶1
+L	java:S106
+"+Replace this use of System.out by a logger.(ëì“Çøÿÿÿÿ8·âì°¶1
+L	java:S106"+Replace this use of System.out by a logger.(ÙÃîüÿÿÿÿ8¹âì°¶1
+L	java:S106"+Replace this use of System.out by a logger.(Ş¨™‰ùÿÿÿÿ8ºâì°¶1

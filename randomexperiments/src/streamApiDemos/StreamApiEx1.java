@@ -1,10 +1,7 @@
 package streamApiDemos;
 
 import java.util.*;
-import java.util.function.BinaryOperator;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
+import java.util.function.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -26,7 +23,7 @@ public class StreamApiEx1 {
         List<String> list = new ArrayList<>();
         list.add("abc");
         list.add("de");
-        demo.multiplyLengthOfAllText(list);
+        demo.multiplyLengthOfAllText2(list);
     }
 
     //keep only strings starting from a
@@ -115,6 +112,23 @@ public class StreamApiEx1 {
         System.out.println("result=" + result);
     }
 
+    void multiplyLengthOfAllText2(Collection<String> collection) {
+        BinaryOperator<Integer> operator = (len1, len2) -> {
+            System.out.println("inside operator");
+            return len1 * len2;
+        };
+        BinaryOperator<Integer>combiner=(len1,len2)-> {
+            System.out.println("inside combiner");
+            return   len1+len2;
+        };
+        Integer identity = 1;
+        int result = collection.stream()
+                .map(text -> text.length())
+                .reduce(identity, operator,combiner);
+
+        System.out.println("result=" + result);
+    }
+
     void collect1(Collection<String> collection) {
         List<String> list = collection.stream()
                 .collect(Collectors.toList());
@@ -126,9 +140,10 @@ public class StreamApiEx1 {
         Set<String> set = collection.stream()
                 .collect(Collectors.toSet());
     }
-/*
-    Map<Integer,Employee>
- */
+
+    /*
+        Map<Integer,Employee>
+     */
     public void collect3(Collection<Employee> collection) {
         Function<Employee, Integer> keyMapper = employee -> employee.id;
         Function<Employee, String> valueMapper = employee -> employee.name;
@@ -136,6 +151,10 @@ public class StreamApiEx1 {
 
     }
 
+    public void collect4(Collection<Employee>collection){
+        collection.stream()
+                .collect()
+    }
 
     private static class Employee {
         private int id;

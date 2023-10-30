@@ -1,0 +1,17 @@
+/**
+Ignore it 
+**/
+Exam Application
+
+Exam{
+id :int
+description: String
+List<Question>questions
+}
+
+
+Question{
+id: long
+description:String 
+answer: Option
+}

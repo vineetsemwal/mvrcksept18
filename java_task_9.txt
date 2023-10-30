@@ -1,0 +1,23 @@
+
+Employee{
+Integer id
+
+String name
+
+
+}
+
+
+
+obj=
+{
+
+id
+name
+
+getId()
+
+
+}
+
+obj.getId()

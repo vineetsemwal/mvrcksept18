@@ -189,3 +189,5 @@ N
 src/fiLambda/MethodRefEx1.java,c\5\c5efed6bc68da7dc9bb279c66a50b1a01897000f
 T
 $src/streamApiDemos/StreamApiEx1.java,6\b\6b03ec6225a3d9df8b58ce9bf2f088cee400e50b
+R
+"src/optionalDemos/OptionalEx1.java,5\c\5c0f8d4564f8e575b926950fe361b6e1edf721eb

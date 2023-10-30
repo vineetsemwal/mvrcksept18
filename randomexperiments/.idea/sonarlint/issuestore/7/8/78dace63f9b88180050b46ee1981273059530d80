@@ -1,0 +1,11 @@
+
+L	java:S106	"+Replace this use of System.out by a logger.(ğ“Áÿÿÿÿÿ8ËÜ²›°1
+L	java:S106
+"+Replace this use of System.out by a logger.(€Ì³Ëøÿÿÿÿ8ËÜ²›°1
+L
+java:S1197"*Move the array designators [] to the type.(£¼úµùÿÿÿÿ8ËÜ²›°1
+G	java:S106"+Replace this use of System.out by a logger.(Äõîè8ÌÜ²›°1
+G	java:S106"+Replace this use of System.out by a logger.(şš¶™8ÍÜ²›°1
+G	java:S106"+Replace this use of System.out by a logger.(°âÿÃ8§œ³›°1
+…
+java:S1157"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(˜³Ù¢ÿÿÿÿÿ8ÎÜ²›°1

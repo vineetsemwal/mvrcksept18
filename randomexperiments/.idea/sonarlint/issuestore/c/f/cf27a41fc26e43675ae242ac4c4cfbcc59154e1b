@@ -1,0 +1,11 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾…‡µşÿÿÿÿ8Ùûñ´1
+b
+java:S1124!"EReorder the modifiers to comply with the Java Language Specification.(Û…Ìó8õûñ´1
+{
+java:S2142'"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8öûñ´1
+G	java:S106#"+Replace this use of System.out by a logger.(ÛÃí8öûñ´1
+G	java:S106$"+Replace this use of System.out by a logger.(¤«ºÑ8÷ûñ´1
+e
+java:S2276%"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(»ãßºøÿÿÿÿ8÷ûñ´1
+G	java:S106&"+Replace this use of System.out by a logger.(¨üËÂ8øûñ´1

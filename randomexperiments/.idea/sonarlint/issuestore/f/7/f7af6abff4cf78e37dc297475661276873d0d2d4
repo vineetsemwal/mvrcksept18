@@ -1,0 +1,28 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾…‡µşÿÿÿÿ8ó²¦’´1
+a
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÒÅ«{8€³¦’´1
+{
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8€³¦’´1
+V
+java:S2274":Remove this call to "wait" or move it into a "while" loop.(ç£ŠM8€³¦’´1
+G	java:S106"+Replace this use of System.out by a logger.(Ğï½İ8€³¦’´1
+`
+java:S2276"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(á˜ ¶8€³¦’´1
+R
+java:S2446"0"notify" may not wake up the appropriate thread.(óÄ£¶øÿÿÿÿ8€³¦’´1
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(½ª¿îüÿÿÿÿ8€³¦’´1
+{
+java:S2142("^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8€³¦’´1
+V
+java:S2274"":Remove this call to "wait" or move it into a "while" loop.(ç£ŠM8€³¦’´1
+G	java:S106$"+Replace this use of System.out by a logger.(ŞÚØ«8ˆ³¦’´1
+e
+java:S2276%"CReplace the call to "Thread.sleep(...)" with a call to "wait(...)".(»ãßºøÿÿÿÿ8ˆ³¦’´1
+R
+java:S2446'"0"notify" may not wake up the appropriate thread.(óÄ£¶øÿÿÿÿ8ˆ³¦’´1
+{
+java:S2142;"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8‰³¦’´1
+{
+java:S2142O"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8Œ³¦’´1
