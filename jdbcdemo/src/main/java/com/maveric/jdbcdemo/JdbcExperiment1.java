@@ -29,8 +29,11 @@ public class JdbcExperiment1 {
         final String username = "root", password = "scooby";
         final Connection connection = DriverManager.getConnection(url, username, password);
         final Statement statement= connection.createStatement();
-        String sql="select * from trainees";
-        ResultSet resultSet =statement.executeQuery(sql);
+        String insertSql="insert into trainees(id,name, dept) values(4 ,'archana' , 'thinknxt');";
+        int rowsAffected=statement.executeUpdate(insertSql);
+        System.out.println("rows affected="+rowsAffected);
+        String fetchAllSql="select * from trainees";
+        ResultSet resultSet =statement.executeQuery(fetchAllSql);
         while (resultSet.next()){
           String traineeName=  resultSet.getString("name");
           String department=resultSet.getString("dept");
@@ -39,5 +42,6 @@ public class JdbcExperiment1 {
           Trainee trainee=new Trainee(id,traineeName,department);
           list.add(trainee);
         }
+
     }
 }
