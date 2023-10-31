@@ -1,9 +1,6 @@
 package com.maveric.jdbcdemo;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +15,18 @@ way of working in jdbc
 public class JdbcExperiment2 {
 
     private List<Trainee> list = new ArrayList<>();
+    final String url = "jdbc:mysql://localhost:3306/trainingdb";
+    final String username = "root", password = "scooby";
+    private Connection con;
+
+
+    public Connection getConnection() throws SQLException {
+        if (con != null) {
+            return con;
+        }
+        con = DriverManager.getConnection(url, username, password);
+        return con;
+    }
 
     public static void main(String[] args) throws Exception {
         JdbcExperiment2 demo = new JdbcExperiment2();
@@ -26,23 +35,57 @@ public class JdbcExperiment2 {
 
     void runApp() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        final String url = "jdbc:mysql://localhost:3306/trainingdb";
-        final String username = "root", password = "scooby";
-        final Connection connection = DriverManager.getConnection(url, username, password);
-        final Statement statement = connection.createStatement();
-        String insertSql = "insert into trainees(id,name, dept) values(4 ,'archana' , 'thinknxt');";
-        int rowsAffected = statement.executeUpdate(insertSql);
-        System.out.println("rows affected=" + rowsAffected);
-        String fetchAllSql = "select * from trainees";
-        ResultSet resultSet = statement.executeQuery(fetchAllSql);
+
+        addTrainee(6,"ajay","thinknxt");
+        List<Trainee>list=fetchAll();
+        for (Trainee trainee:list){
+            display(trainee);
+        }
+    }
+
+    void display(Trainee trainee){
+        System.out.println("trainee-"+trainee.getId()+"-"+trainee.getName()+"-"+trainee.getDepartment());
+    }
+
+    public List<Trainee> fetchAll() throws SQLException {
+        PreparedStatement statement = getPreparedStatementForFetchAll();
+        ResultSet resultSet = statement.executeQuery();
         while (resultSet.next()) {
             String traineeName = resultSet.getString("name");
             String department = resultSet.getString("dept");
             int id = resultSet.getInt("id");
-            System.out.println("fetched Data =" + id + "-" + traineeName + "-" + department);
             Trainee trainee = new Trainee(id, traineeName, department);
             list.add(trainee);
         }
+        closeConnection();
+        return list;
+    }
+
+    PreparedStatement getPreparedStatementForFetchAll() throws SQLException {
+        String sql = "select * from trainees";
+        final PreparedStatement statement = getConnection().prepareStatement(sql);
+        return statement;
+    }
+
+    PreparedStatement getPreparedStatementForAdd() throws SQLException {
+        String sql = "insert into trainees(id,name, dept) values(? ,? , ?)";
+        final PreparedStatement statement = getConnection().prepareStatement(sql);
+        return statement;
+    }
+
+    void addTrainee(int id, String name, String dept) throws Exception {
+        final PreparedStatement statement = getPreparedStatementForAdd();
+        statement.setInt(1, id);
+        statement.setString(2, name);
+        statement.setString(3, dept);
+        int rowsAffected = statement.executeUpdate();
+        closeConnection();
 
     }
+
+    void closeConnection() throws SQLException {
+        con.close();
+        con = null;
+    }
+
 }
