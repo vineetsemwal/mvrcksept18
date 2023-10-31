@@ -25,7 +25,7 @@ public class JdbcExperiment1 {
 
     void runApp() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        final String url = "jdbc:mysql://localhost:3306/ trainingdb";
+        final String url = "jdbc:mysql://localhost:3306/trainingdb";
         final String username = "root", password = "scooby";
         final Connection connection = DriverManager.getConnection(url, username, password);
         final Statement statement= connection.createStatement();
