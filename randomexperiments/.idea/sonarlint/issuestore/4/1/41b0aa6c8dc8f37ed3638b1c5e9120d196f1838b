@@ -1,0 +1,15 @@
+
+‚
+java:S1488*"eImmediately return this expression instead of assigning it to the temporary variable "compareResult".(Øå­8À—Å´¶1
+G	java:S106"+Replace this use of System.out by a logger.(Âú…Ï8É—Å´¶1
+G	java:S106"+Replace this use of System.out by a logger.(­Ê”ñ8Ê—Å´¶1
+L	java:S106"+Replace this use of System.out by a logger.(§çÊíùÿÿÿÿ8Ê—Å´¶1
+G	java:S106"+Replace this use of System.out by a logger.(µçÃÃ8Ê—Å´¶1
+L	java:S106"+Replace this use of System.out by a logger.(İ˜½…ùÿÿÿÿ8Ê—Å´¶1
+L	java:S106"+Replace this use of System.out by a logger.(·¢üüÿÿÿÿ8Ë—Å´¶1
+G	java:S106"+Replace this use of System.out by a logger.(µçÃÃ8Ë—Å´¶1
+L	java:S106"+Replace this use of System.out by a logger.(İ˜½…ùÿÿÿÿ8Ë—Å´¶1
+G	java:S106 "+Replace this use of System.out by a logger.(õœª8Ë—Å´¶1
+X	java:S125%"<This block of commented-out lines of code should be removed.(ªªš8Ì—Å´¶1
+L	java:S106."+Replace this use of System.out by a logger.(×·Çâúÿÿÿÿ8Ì—Å´¶1
+L	java:S1066"+Replace this use of System.out by a logger.(ï—†¼şÿÿÿÿ8Ì—Å´¶1

@@ -1,0 +1,12 @@
+
+G	java:S106"+Replace this use of System.out by a logger.(ü‹¿õ8°”Ã±1
+L	java:S106"+Replace this use of System.out by a logger.(¥Âò şÿÿÿÿ8±”Ã±1
+L	java:S106"+Replace this use of System.out by a logger.(çĞÓ»ùÿÿÿÿ8±”Ã±1
+L	java:S106"+Replace this use of System.out by a logger.(îÙê€úÿÿÿÿ8±”Ã±1
+G	java:S106#"+Replace this use of System.out by a logger.(–¨† 8²”Ã±1
+G	java:S106&"+Replace this use of System.out by a logger.(èßÉ¯8²”Ã±1
+G	java:S106*"+Replace this use of System.out by a logger.(ïˆ†ğ8²”Ã±1
+L	java:S106,"+Replace this use of System.out by a logger.(ÕÎ½¢üÿÿÿÿ8²”Ã±1
+L	java:S1061"+Replace this use of System.out by a logger.(ï—†¼şÿÿÿÿ8Áƒ­Ã±1
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ÜÊ„Ä±1

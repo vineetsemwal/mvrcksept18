@@ -1,0 +1,5 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾…‡µþÿÿÿÿ8¯´î¹´1
+L	java:S106"+Replace this use of System.out by a logger.(±ÚÂ˜øÿÿÿÿ8Í¬ð¹´1
+}
+java:S4276"[Refactor this code to use the more specialised Functional Interface 'ToIntFunction<String>'(ºªœºûÿÿÿÿ8¹´î¹´1

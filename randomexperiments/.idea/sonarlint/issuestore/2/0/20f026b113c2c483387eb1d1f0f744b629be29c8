@@ -1,0 +1,19 @@
+
+c
+java:S1192	"FDefine a constant instead of duplicating this literal "hello" 3 times.(şó‘Í8ÊÜĞ²¶1
+>
+java:S1643"Use a StringBuilder instead.(ÌˆÔÆÿÿÿÿÿ8ËÜĞ²¶1
+>
+java:S1643"Use a StringBuilder instead.(ÌˆÔÆÿÿÿÿÿ8ËÜĞ²¶1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡ÛÂ8ÌÜĞ²¶1
+c
+java:S1612"AReplace this lambda with method reference 'CharSequence::length'.(óÅ®§ûÿÿÿÿ8ÔÜĞ²¶1
+L	java:S106
+"+Replace this use of System.out by a logger.(ô†ï«şÿÿÿÿ8ÖÜĞ²¶1
+x
+java:S4276"[Refactor this code to use the more specialised Functional Interface 'ToIntFunction<String>'(Øı˜‚8ÖÜĞ²¶1
+^
+java:S1612"AReplace this lambda with method reference 'CharSequence::length'.(Øı˜‚8ÖÜĞ²¶1
+L	java:S106"+Replace this use of System.out by a logger.(åòóŒüÿÿÿÿ8ØÜĞ²¶1
+G	java:S106"+Replace this use of System.out by a logger.(çİë´8ÙÜĞ²¶1
+G	java:S106!"+Replace this use of System.out by a logger.(È¹®¥8“¿Ò²¶1

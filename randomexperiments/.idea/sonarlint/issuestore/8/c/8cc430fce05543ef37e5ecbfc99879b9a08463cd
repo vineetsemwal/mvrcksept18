@@ -1,0 +1,9 @@
+
+‚
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "employee".(ã¨˜Ïüÿÿÿÿ8å¹‡‹´1
+c
+java:S1075
+"ARefactor your code to get this URI from a customizable parameter.(­¸’¯ûÿÿÿÿ8í¹‡‹´1
+G	java:S106"+Replace this use of System.out by a logger.(èÒË‹8î¹‡‹´1
+a
+java:S2147"DCombine this catch with the one at line 26, which has the same body.(ü¨áé8ï¹‡‹´1

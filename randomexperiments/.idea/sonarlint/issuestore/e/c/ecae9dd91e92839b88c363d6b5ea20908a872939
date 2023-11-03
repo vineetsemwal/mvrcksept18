@@ -1,0 +1,8 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾…‡µþÿÿÿÿ8¸óÂ´´1
+Ž
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙØ¤Þýÿÿÿÿ8£çì´´1
+]	java:S125"<This block of commented-out lines of code should be removed.(•Á¥®þÿÿÿÿ8ÂóÂ´´1
+{
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ý¾8ÃóÂ´´1
+G	java:S106"+Replace this use of System.out by a logger.(è¤×¤8ÅÇâ´´1

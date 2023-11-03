@@ -1,4 +1,17 @@
 
+Use build automation tool Maven
+group id: com.maveric
+artifact id: customerms
+version: 1.0
+
+use log4j
+
+
+
+
+
+
+
 A company wants to create an internal Customer management system for its customers
 Below are the details 
 
