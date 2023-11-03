@@ -5,15 +5,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
 
-way of working in jdbc
-        1) Register Driver
-        2) Create database connection
-         3) create statement
-         4) execute query (CRUD)
-         */
 public class JpaExperiment1 {
+
     private EntityManager entityManager;
 
     public EntityManager getEntityManager() {
