@@ -1,13 +1,11 @@
 package com.maveric.jpademo1;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table(name = "trainees_data")
 @Entity
 public class Trainee {
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id
     private Integer id;
     @Column(unique = true,nullable = false)
@@ -16,8 +14,7 @@ public class Trainee {
     private String department;
     public Trainee(){}
 
-    public Trainee(int id, String name, String department){
-        this.id=id;
+    public Trainee( String name, String department){
         this.name=name;
         this.department=department;
     }
