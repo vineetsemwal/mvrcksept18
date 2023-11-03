@@ -20,12 +20,6 @@ public class JpaExperiment1 {
         return entityManager;
     }
 
-    private int generatedId;
-
-    int generateId() {
-        return ++generatedId;
-    }
-
     public static void main(String[] args) throws Exception {
         JpaExperiment1 demo = new JpaExperiment1();
         demo.runApp();
@@ -72,8 +66,7 @@ public class JpaExperiment1 {
     }
 
     Trainee addTrainee(String name, String dept) throws Exception {
-        int id = generateId();
-        Trainee trainee = new Trainee(id, name, dept);
+        Trainee trainee = new Trainee( name, dept);
         EntityTransaction transaction = getEntityManager().getTransaction();
         transaction.begin();
         getEntityManager().persist(trainee);
