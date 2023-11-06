@@ -12,18 +12,11 @@ public class Trainee {
     @Column(unique = true,nullable = false)
     private String name;
 
-    @ManyToOne(optional = true)
-    private Department department;
 
     public Trainee(){}
 
     public Trainee(String name){
         this.name=name;
-    }
-
-    public Trainee( String name,Department department){
-        this.name=name;
-        this.department=department;
     }
 
 
@@ -41,14 +34,6 @@ public class Trainee {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
     }
 
     public void setId(Integer id) {

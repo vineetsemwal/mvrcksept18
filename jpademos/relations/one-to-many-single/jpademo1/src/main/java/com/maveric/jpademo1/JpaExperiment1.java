@@ -3,7 +3,9 @@ package com.maveric.jpademo1;
 import javax.persistence.*;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public class JpaExperiment1 {
@@ -23,26 +25,26 @@ public class JpaExperiment1 {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("trainingms");
         entityManager = emf.createEntityManager();
 
-        Department digital=createDepartment("dig","digital","bangalore");
+        Department digital = createDepartment("dig", "digital", "bangalore");
         System.out.println("created digital");
         display(digital);
-        Department qe=createDepartment("qe","qe","chennai");
-        String qeId=qe.getId();
+        Department qe = createDepartment("qe", "qe", "chennai");
+        String qeId = qe.getId();
         System.out.println("created qe");
         display(qe);
-         String digitalId=digital.getId();
+        String digitalId = digital.getId();
         Trainee ajay = addTrainee("ajay");
-        int trainee1Id=ajay.getId();
+        int trainee1Id = ajay.getId();
         System.out.println("trainee created");
         display(ajay);
         Trainee archana = addTrainee("archana");
-        int trainee2Id=archana.getId();
+        int trainee2Id = archana.getId();
         System.out.println("trainee created");
         display(archana);
         //assigning departments to trainees
         System.out.println("***assigning departments to trainees");
-        assignDepartment(digitalId,trainee1Id);
-        assignDepartment(digitalId,trainee2Id );
+        assignDepartment(digitalId, trainee1Id);
+        assignDepartment(digitalId, trainee2Id);
 
         int id = ajay.getId();
         System.out.println("trainee to be fetched by id=" + id);
@@ -52,14 +54,18 @@ public class JpaExperiment1 {
     }
 
     void display(Trainee trainee) {
-        System.out.println("trainee-" + trainee.getId() + "-" + trainee.getName() );
-        Department department=trainee.getDepartment();
-        if(department!=null) {
-            display(department);
-        }
+        System.out.println("trainee-" + trainee.getId() + "-" + trainee.getName());
+
     }
-    void display(Department department){
-        System.out.println(department.getId()+"-"+department.getName()+"-"+department.getLocation());
+
+    void display(Department department) {
+        System.out.println(department.getId() + "-" + department.getName() + "-" + department.getLocation());
+        Set<Trainee> trainees = department.getTrainees();
+        if(trainees!=null){
+            for (Trainee trainee:trainees){
+                display(trainee);
+            }
+        }
     }
 
     Trainee findById(int id) {
@@ -90,7 +96,13 @@ public class JpaExperiment1 {
         Trainee trainee = getEntityManager().find(Trainee.class, traineeId);
         EntityTransaction transaction = getEntityManager().getTransaction();
         transaction.begin();
-        trainee.setDepartment(department);
+        Set<Trainee>trainees=department.getTrainees();
+        if(trainees==null){
+            trainees=new HashSet<>();
+            department.setTrainees(trainees);
+        }
+        trainees.add(trainee);
+        getEntityManager().merge(department);
         transaction.commit();
     }
 

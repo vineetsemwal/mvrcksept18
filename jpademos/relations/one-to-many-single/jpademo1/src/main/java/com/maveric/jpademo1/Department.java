@@ -1,9 +1,9 @@
 package com.maveric.jpademo1;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Table(name = "departments")
 @Entity
@@ -15,6 +15,9 @@ public class Department {
 
     private String location;
 
+    @OneToMany
+    private Set<Trainee> trainees;
+
     public Department(){}
 
     public Department(String id,String name,String location){
@@ -22,6 +25,15 @@ public class Department {
         this.name=name;
         this.location=location;
     }
+
+    public Set<Trainee> getTrainees() {
+        return trainees;
+    }
+
+    public void setTrainees(Set<Trainee> trainees) {
+        this.trainees = trainees;
+    }
+
     public String getId() {
         return id;
     }
