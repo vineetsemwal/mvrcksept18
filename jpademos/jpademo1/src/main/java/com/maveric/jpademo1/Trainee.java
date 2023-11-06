@@ -1,6 +1,7 @@
 package com.maveric.jpademo1;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Table(name = "trainees_data")
 @Entity
@@ -41,5 +42,18 @@ public class Trainee {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Trainee trainee = (Trainee) object;
+        return Objects.equals(id, trainee.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

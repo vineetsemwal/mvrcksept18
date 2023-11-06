@@ -17,6 +17,7 @@ public class Trainee {
     @OneToOne
     private Address address;
 
+
     public Trainee(){}
 
     public Trainee( String name, String department,Address address){
