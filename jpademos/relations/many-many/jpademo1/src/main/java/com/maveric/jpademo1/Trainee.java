@@ -2,6 +2,7 @@ package com.maveric.jpademo1;
 
 import javax.persistence.*;
 import java.util.Objects;
+import java.util.Set;
 
 @Table(name = "trainees_data")
 @Entity
@@ -11,14 +12,21 @@ public class Trainee {
     private Integer id;
     @Column(unique = true,nullable = false)
     private String name;
-    @Column(name = "dept")
-    private String department;
+
+    @ManyToMany
+    private Set<Department> departments;
+
     public Trainee(){}
 
-    public Trainee( String name, String department){
+    public Trainee(String name){
         this.name=name;
-        this.department=department;
     }
+
+    public Trainee( String name,Set<Department> departments){
+        this.name=name;
+        this.departments=departments;
+    }
+
 
     public int getId() {
         return id;
@@ -36,12 +44,16 @@ public class Trainee {
         this.name = name;
     }
 
-    public String getDepartment() {
-        return department;
+    public Set<Department> getDepartments() {
+        return departments;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setDepartments(Set<Department> departments) {
+        this.departments = departments;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     @Override

@@ -11,14 +11,21 @@ public class Trainee {
     private Integer id;
     @Column(unique = true,nullable = false)
     private String name;
-    @Column(name = "dept")
-    private String department;
+
+    @ManyToOne(optional = true)
+    private Department department;
+
     public Trainee(){}
 
-    public Trainee( String name, String department){
+    public Trainee(String name){
+        this.name=name;
+    }
+
+    public Trainee( String name,Department department){
         this.name=name;
         this.department=department;
     }
+
 
     public int getId() {
         return id;
@@ -36,12 +43,16 @@ public class Trainee {
         this.name = name;
     }
 
-    public String getDepartment() {
+    public Department getDepartment() {
         return department;
     }
 
-    public void setDepartment(String department) {
+    public void setDepartment(Department department) {
         this.department = department;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     @Override

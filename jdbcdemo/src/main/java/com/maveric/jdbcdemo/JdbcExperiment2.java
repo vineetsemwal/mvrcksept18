@@ -14,6 +14,7 @@ way of working in jdbc
          */
 public class JdbcExperiment2 {
 
+
     private List<Trainee> list = new ArrayList<>();
     final String url = "jdbc:mysql://localhost:3306/trainingdb";
     final String username = "root", password = "scooby";
@@ -41,6 +42,7 @@ public class JdbcExperiment2 {
         for (Trainee trainee:list){
             display(trainee);
         }
+        closeConnection();
     }
 
     void display(Trainee trainee){
@@ -57,7 +59,6 @@ public class JdbcExperiment2 {
             Trainee trainee = new Trainee(id, traineeName, department);
             list.add(trainee);
         }
-        closeConnection();
         return list;
     }
 
@@ -79,8 +80,6 @@ public class JdbcExperiment2 {
         statement.setString(2, name);
         statement.setString(3, dept);
         int rowsAffected = statement.executeUpdate();
-        closeConnection();
-
     }
 
     void closeConnection() throws SQLException {

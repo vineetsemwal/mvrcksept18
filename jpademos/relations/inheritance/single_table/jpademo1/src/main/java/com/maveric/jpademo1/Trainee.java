@@ -3,9 +3,11 @@ package com.maveric.jpademo1;
 import javax.persistence.*;
 import java.util.Objects;
 
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "disc")
 @Table(name = "trainees_data")
 @Entity
-public class Trainee {
+public abstract class Trainee {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Id
     private Integer id;
@@ -13,11 +15,15 @@ public class Trainee {
     private String name;
     @Column(name = "dept")
     private String department;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Address address;
+
     public Trainee(){}
 
-    public Trainee( String name, String department){
+    public Trainee( String name, String department,Address address){
         this.name=name;
         this.department=department;
+        this.address=address;
     }
 
     public int getId() {
@@ -42,6 +48,18 @@ public class Trainee {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override
