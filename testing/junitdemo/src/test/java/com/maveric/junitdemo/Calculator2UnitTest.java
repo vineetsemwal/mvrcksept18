@@ -13,7 +13,8 @@ class Calculator2UnitTest {
     @BeforeEach
     void setup() {
         adder = mock(Adder.class);
-        calculator = new Calculator2(adder);
+        Calculator2 calcy = new Calculator2(adder);
+        calculator=spy(calcy);
     }
 
     @Test
@@ -23,5 +24,18 @@ class Calculator2UnitTest {
         int expectation = 3;
         assertEquals(expectation, result);
         verify(adder).add(1,2);
+    }
+
+    /**
+     * scenario : number is positive
+     * input : 5
+     */
+    @Test
+    void multiplyBy10_1(){
+        int input =5;
+      // when(calculator.multiply(input,10)).thenReturn(50);
+        doReturn(50).when(calculator).multiply(input,10);
+        int result=calculator.multiplyBy10(5);
+        assertEquals(50,result);
     }
 }
