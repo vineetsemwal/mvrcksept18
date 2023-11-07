@@ -5,12 +5,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
-class CalculatorUnitTests {
-    Calculator calculator;
+class Calculator1UnitTests {
+    Calculator1 calculator;
 
     @BeforeEach
     void setup(){
-        calculator=new Calculator();
+        calculator=new Calculator1();
         System.out.println("***inside setup");
     }
 
