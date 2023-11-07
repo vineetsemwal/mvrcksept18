@@ -6,7 +6,7 @@ import static org.mockito.Mockito.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Calculator2UnitTest {
+class Calculator2UnitTest1 {
     Calculator2 calculator;
     Adder adder;
 
