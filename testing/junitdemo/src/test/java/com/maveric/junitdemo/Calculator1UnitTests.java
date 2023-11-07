@@ -130,4 +130,21 @@ class Calculator1UnitTests {
     }
 
 
+    @Test
+    public void isEven_1(){
+        int input1=4,input2=6;
+        Executable exec1=()->{
+            boolean result=calculator.isEven(input1);
+            assertTrue(result);
+        };
+        Executable exec2=()->{
+            boolean result=calculator.isEven(input2);
+            assertTrue(result);
+        };
+        assertAll(exec1,exec2);
+    }
+
+
+
+
 }
