@@ -4,6 +4,9 @@ package com.maveric.junitdemo;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.function.Executable;
+
+import java.util.List;
 
 class Calculator1UnitTests {
     Calculator1 calculator;
@@ -109,6 +112,22 @@ class Calculator1UnitTests {
 
     }
 
+    @Nested
+    class ToBlockString{
+
+        /**
+         * input is null
+         */
+        @Test
+        void toBlockString_invalid_input() throws Exception{
+            String input=null;
+            Executable executable=()->{
+                calculator.toBlockString(input);
+            };
+
+            assertThrows(InvalidTextException.class,executable);
+        }
+    }
 
 
 }
