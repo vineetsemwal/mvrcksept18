@@ -25,52 +25,53 @@ public class JpaExperiment1 {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("trainingms");
         entityManager = emf.createEntityManager();
 
-        Department digital=createDepartment("dig","digital","bangalore");
+        Department digital = createDepartment("dig", "digital", "bangalore");
         System.out.println("created digital");
         display(digital);
-        Department qe=createDepartment("qe","qe","chennai");
-        String qeId=qe.getId();
+        Department qe = createDepartment("qe", "qe", "chennai");
+        String qeId = qe.getId();
         System.out.println("created qe");
         display(qe);
-         String digitalId=digital.getId();
+        String digitalId = digital.getId();
         Trainee ajay = addTrainee("ajay");
-        int trainee1Id=ajay.getId();
+        int trainee1Id = ajay.getId();
         System.out.println("trainee created");
         display(ajay);
         Trainee archana = addTrainee("archana");
-        int trainee2Id=archana.getId();
+        int trainee2Id = archana.getId();
         System.out.println("trainee created");
         display(archana);
         //assigning departments to trainees
         System.out.println("***assigning departments to trainees");
-        assignDepartment(digitalId,trainee1Id);
-        assignDepartment(digitalId,trainee2Id );
+        assignDepartment(digitalId, trainee1Id);
+        assignDepartment(digitalId, trainee2Id);
 
         int id = ajay.getId();
         System.out.println("trainee to be fetched by id=" + id);
         Trainee trainee = findById(id);
         display(trainee);
         System.out.println("***** find department digital");
-        Department foundDept=findDepartmentById("dig");
+        Department foundDept = findDepartmentById("dig");
         display(foundDept);
         close();
     }
 
     void display(Trainee trainee) {
-        System.out.println("trainee-" + trainee.getId() + "-" + trainee.getName() );
-        Set<Department> departments=trainee.getDepartments();
-        if(departments!=null) {
-           for(Department department:departments) {
-               display(department);
-           }
+        System.out.println("trainee-" + trainee.getId() + "-" + trainee.getName());
+        Set<Department> departments = trainee.getDepartments();
+        if (departments != null) {
+            for (Department department : departments) {
+                display(department);
+            }
         }
     }
-    void display(Department department){
-        System.out.println(department.getId()+"-"+department.getName()+"-"+department.getLocation());
-        Set<Trainee>trainees=department.getTrainees();
-        if(trainees!=null){
-            for (Trainee trainee:trainees){
-                System.out.println("trainee-" + trainee.getId() + "-" + trainee.getName() );
+
+    void display(Department department) {
+        System.out.println(department.getId() + "-" + department.getName() + "-" + department.getLocation());
+        Set<Trainee> trainees = department.getTrainees();
+        if (trainees != null) {
+            for (Trainee trainee : trainees) {
+                System.out.println("trainee-" + trainee.getId() + "-" + trainee.getName());
             }
         }
     }
@@ -80,8 +81,8 @@ public class JpaExperiment1 {
         return trainee;
     }
 
-    Department findDepartmentById(String id){
-        return getEntityManager().find(Department.class,id);
+    Department findDepartmentById(String id) {
+        return getEntityManager().find(Department.class, id);
     }
 
     Trainee addTrainee(String name) throws Exception {
@@ -105,22 +106,22 @@ public class JpaExperiment1 {
     void assignDepartment(String deptId, Integer traineeId) {
         Department department = getEntityManager().find(Department.class, deptId);
         Trainee trainee = getEntityManager().find(Trainee.class, traineeId);
-       EntityTransaction transaction= getEntityManager().getTransaction();
-       transaction.begin();
-        Set<Department>departments=trainee.getDepartments();
-        if(departments==null){
-            departments=new HashSet<>();
+        EntityTransaction transaction = getEntityManager().getTransaction();
+        transaction.begin();
+        Set<Department> departments = trainee.getDepartments();
+        if (departments == null) {
+            departments = new HashSet<>();
             trainee.setDepartments(departments);
         }
         departments.add(department);
         transaction.commit();
 
-       Set<Trainee>trainees= department.getTrainees();
-       if(trainees==null){
-           trainees=new HashSet<>();
-           department.setTrainees(trainees);
-       }
-       trainees.add(trainee);
+        Set<Trainee> trainees = department.getTrainees();
+        if (trainees == null) {
+            trainees = new HashSet<>();
+            department.setTrainees(trainees);
+        }
+        trainees.add(trainee);
 
     }
 
