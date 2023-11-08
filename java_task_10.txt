@@ -1,4 +1,4 @@
-A company wants to manage projects 
+A company wants to manage projects ,  Create an applications where projects and the employees working on those projects are managed
 
 
 Employee{
