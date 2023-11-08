@@ -1,0 +1,73 @@
+A company wants to manage projects 
+
+
+Employee{
+id : Long
+firstName: String
+lastName:String
+projectWorkingOn: Project
+}
+
+Project{
+id: Long
+name: String
+List<Employee>members
+}
+
+IEmployeeService{
+registerEmployee(firstName, lastName)
+findEmployeeById(eid)
+findEmployeesAscByFirstName(): List<Employee>
+
+}
+
+IEmployeeDao{
+// use store Map<Long,Employee> in first iteration (before using hibernate)
+findById(id):Optional<Employee>
+save(employee): Employee
+
+}
+
+IProjectService{
+// keep project store Map<Integer,Project> in first iteration (before using hibernate)
+
+addProject(projectName, Collection<String> technologies):Project
+findProjectById(pid):Project
+assignProject(projectId, employeeId):void
+
+}
+
+IProjectDao{
+findProjectById(pid):Optional<Project>
+save(project): Project
+
+}
+
+
+
+Validations
+
+projectName should be between 2 and 10 chars
+firstName between 3 and 10 chars
+lastName between 3 and 10 chars
+employee id should be greater than zero
+project id should be greater than zero
+
+***************
+Sequence in which work should be done
+*******************
+
+1) Create maven project
+
+2) Create Employee, Project entities
+
+3) Create IEmployeeDao interface with one method save(employee) , then create EmplloyeeDaoImpl- and complete this method
+4) Create IEmployeeService interface with one operation like register employee, then create EmployeeServiceImpl
+5) Create frontend class for frontend operation register employee
+6) Test end to end operation is working by using Main class
+Similarly do other sprints/iterations  for all the operations one by one
+
+7)create IProjectDao interface with one method save(project) then create ProjectServiceImpl and complete this method
+.....like above
+  
+
