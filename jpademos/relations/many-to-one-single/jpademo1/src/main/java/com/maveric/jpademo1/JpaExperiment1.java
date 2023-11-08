@@ -57,7 +57,7 @@ public class JpaExperiment1 {
 
     List<Trainee> findTraineesByDepartment(String department) {
         String qlText = "select trainee from Trainee trainee join trainee.department dept where dept.name=:deptParam";
-        Query query = getEntityManager().createQuery(qlText);
+        TypedQuery<Trainee> query = getEntityManager().createQuery(qlText,Trainee.class);
         query.setParameter("deptParam", department);
         List<Trainee> list = query.getResultList();
         return list;
