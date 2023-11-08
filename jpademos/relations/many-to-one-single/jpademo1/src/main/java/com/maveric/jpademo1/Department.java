@@ -58,4 +58,13 @@ public class Department {
         Department that = (Department) object;
         return Objects.equals(id, that.id);
     }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                '}';
+    }
 }

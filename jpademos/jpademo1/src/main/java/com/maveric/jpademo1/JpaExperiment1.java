@@ -30,37 +30,56 @@ public class JpaExperiment1 {
         System.out.println("trainee created");
         display(archana);
         int id = ajay.getId();
-        System.out.println("trainee to be fetched by id="+id);
+        System.out.println("trainee to be fetched by id=" + id);
         Trainee trainee = findById(id);
         display(trainee);
+        System.out.println("***********fetching all trainees");
+        List<Trainee>allTrainees=fetchAll();
+        allTrainees.forEach(this::display);
+
+        System.out.println("*****find by department");
+        List<Trainee>digitalTrainees=findByDepartment("digital");
+        digitalTrainees.forEach(this::display);
+
         close();
+
     }
 
     void display(Trainee trainee) {
         System.out.println("trainee-" + trainee.getId() + "-" + trainee.getName() + "-" + trainee.getDepartment());
     }
 
-    /*
-        public List<Trainee> fetchAll() throws SQLException {
-            PreparedStatement statement = getPreparedStatementForFetchAll();
-            ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()) {
-                String traineeName = resultSet.getString("name");
-                String department = resultSet.getString("dept");
-                int id = resultSet.getInt("id");
-                Trainee trainee = new Trainee(id, traineeName, department);
-                list.add(trainee);
-            }
-            return list;
-        }
-    */
+
+    public List<Trainee> fetchAll() throws SQLException {
+        String qlText = "from Trainee";
+        TypedQuery<Trainee> query = getEntityManager().createQuery(qlText, Trainee.class);
+        List<Trainee>list=query.getResultList();
+        return list;
+    }
+
+    public Trainee findByName(String name){
+        String qlText="from Trainee where name=:param";
+        TypedQuery<Trainee> query = getEntityManager().createQuery(qlText, Trainee.class);
+        query.setParameter("param",name);
+        Trainee trainee=query.getSingleResult();
+        return trainee;
+    }
+
+    public List<Trainee> findByDepartment(String department){
+        String qlText="from Trainee where department=:param";
+        TypedQuery<Trainee> query = getEntityManager().createQuery(qlText, Trainee.class);
+        query.setParameter("param",department);
+        List<Trainee> trainee=query.getResultList();
+        return trainee;
+    }
+
     Trainee findById(int id) {
         Trainee trainee = getEntityManager().find(Trainee.class, id);
         return trainee;
     }
 
     Trainee addTrainee(String name, String dept) throws Exception {
-        Trainee trainee = new Trainee( name, dept);
+        Trainee trainee = new Trainee(name, dept);
         EntityTransaction transaction = getEntityManager().getTransaction();
         transaction.begin();
         getEntityManager().persist(trainee);

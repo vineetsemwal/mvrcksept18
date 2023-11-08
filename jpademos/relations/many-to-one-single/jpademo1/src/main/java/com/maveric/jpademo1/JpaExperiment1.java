@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class JpaExperiment1 {
@@ -23,43 +24,55 @@ public class JpaExperiment1 {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("trainingms");
         entityManager = emf.createEntityManager();
 
-        Department digital=createDepartment("dig","digital","bangalore");
+        Department digital = createDepartment("dig", "digital", "bangalore");
         System.out.println("created digital");
         display(digital);
-        Department qe=createDepartment("qe","qe","chennai");
-        String qeId=qe.getId();
+        Department qe = createDepartment("qe", "qe", "chennai");
+        String qeId = qe.getId();
         System.out.println("created qe");
         display(qe);
-         String digitalId=digital.getId();
+        String digitalId = digital.getId();
         Trainee ajay = addTrainee("ajay");
-        int trainee1Id=ajay.getId();
+        int trainee1Id = ajay.getId();
         System.out.println("trainee created");
         display(ajay);
         Trainee archana = addTrainee("archana");
-        int trainee2Id=archana.getId();
+        int trainee2Id = archana.getId();
         System.out.println("trainee created");
         display(archana);
         //assigning departments to trainees
         System.out.println("***assigning departments to trainees");
-        assignDepartment(digitalId,trainee1Id);
-        assignDepartment(digitalId,trainee2Id );
+        assignDepartment(digitalId, trainee1Id);
+        assignDepartment(digitalId, trainee2Id);
 
         int id = ajay.getId();
         System.out.println("trainee to be fetched by id=" + id);
         Trainee trainee = findById(id);
         display(trainee);
+        System.out.println("*****fetching trainees by department digital");
+        List<Trainee> list = findTraineesByDepartment("digital");
+        list.forEach(this::display);
         close();
     }
 
+    List<Trainee> findTraineesByDepartment(String department) {
+        String qlText = "select trainee from Trainee trainee join trainee.department dept where dept.name=:deptParam";
+        Query query = getEntityManager().createQuery(qlText);
+        query.setParameter("deptParam", department);
+        List<Trainee> list = query.getResultList();
+        return list;
+    }
+
     void display(Trainee trainee) {
-        System.out.println("trainee-" + trainee.getId() + "-" + trainee.getName() );
-        Department department=trainee.getDepartment();
-        if(department!=null) {
+        System.out.println("trainee-" + trainee.getId() + "-" + trainee.getName());
+        Department department = trainee.getDepartment();
+        if (department != null) {
             display(department);
         }
     }
-    void display(Department department){
-        System.out.println(department.getId()+"-"+department.getName()+"-"+department.getLocation());
+
+    void display(Department department) {
+        System.out.println(department.getId() + "-" + department.getName() + "-" + department.getLocation());
     }
 
     Trainee findById(int id) {
