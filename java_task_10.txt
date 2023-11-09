@@ -12,6 +12,8 @@ Project{
 id: Long
 name: String
 List<Employee>members
+@ElementCollection
+Set<String> technologies
 }
 
 IEmployeeService{
