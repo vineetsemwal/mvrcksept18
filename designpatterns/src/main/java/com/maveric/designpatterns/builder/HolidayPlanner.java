@@ -1,4 +1,4 @@
-package com.maveric.designpatterns.singleton.builder;
+package com.maveric.designpatterns.builder;
 
 public class HolidayPlanner {
     private String lunchTime;

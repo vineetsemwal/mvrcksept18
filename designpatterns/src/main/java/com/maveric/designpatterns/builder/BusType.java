@@ -1,4 +1,4 @@
-package com.maveric.designpatterns.singleton.builder;
+package com.maveric.designpatterns.builder;
 
 public enum BusType {
     DELUXE, ORDINARY, SLEEPER
