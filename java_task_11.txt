@@ -1,0 +1,6 @@
+We have Family of Classes of same Type foreg. WindowsComputer, MacComputer
+These computers work with in their ecosystem ie. MacComputer works with lighting cable for data transfer and a specific Charger
+Similarly Windows Computer use data cable suitable for it and charger specifically for it
+
+Create a solution using AbstractFactory design pattern so that you get MacComputer and the suitable devices/equipments for the MAc when required,
+Same for Windows Computer        
