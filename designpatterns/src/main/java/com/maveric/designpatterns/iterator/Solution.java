@@ -3,22 +3,23 @@ package com.maveric.designpatterns.iterator;
 import com.maveric.designpatterns.facade.Product;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class IteratorUse {
+public class Solution {
     private List<Product> store = new ArrayList<>();
-    public IteratorUse(){
+    public Solution(){
         store.add(new Product(1,"iphone"));
         store.add(new Product(2, "motorola"));
     }
 
 
-    List<Product> fetchAll() {
-        return store;
+    Iterator<Product> fetchAll() {
+        return store.iterator();
     }
 
     public static void main(String[] args) {
-     IteratorUse demo=new IteratorUse();
+     Solution demo=new Solution();
      demo.runApp();
 
     }
@@ -30,10 +31,11 @@ public class IteratorUse {
     class Client {
 
         void displayProducts() {
-            Product samsung=new Product(5,"samsung");
-            List<Product> products = fetchAll();
-            products.add(samsung);
-            for (Product product : products) {
+            //Product samsung=new Product(5,"samsung");
+            Iterator<Product> products = fetchAll();
+          //  products.add(samsung);
+            while (products.hasNext()) {
+                Product product=products.next();
                 System.out.println("product="+product.getId()+"-"+product.getName());
             }
         }
