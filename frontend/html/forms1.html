@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <body>
-  
-<form method="get" action="processing server url">
-    <div>
-   <label>Username</label>           
-  <input type="text" name="username" placeholder="write name">
-  </div>
-  
-  <div>
-  <label>Password</label>   
-  <input type="password" name="password"> 
-  </div>
 
-  <div>
-    <input type="radio" name="language" value="java">
-      <label>Java</label>
-  </div>
-    <div>
-    <input type="radio" name="language" value="python">
-   <label>python</label>
+    <form method="get" action="processing server url">
+        <div>
+            <label>Username</label>
+            <input type="text" name="username" placeholder="write name">
+        </div>
 
-   <div>
-   <label>Choose Curry</label>
-   <select name="curry">
-    <option disabled selected>Choose One</option>
-    <option value="daal">Daal Fry</option>
-    <option value="sambar">Sambar Curry</option>
-    
-   </select>
-</div>
-</div>
+        <div>
+            <label>Password</label>
+            <input type="password" name="password">
+        </div>
 
-  
-  <input type="submit" value="Submit Form">
-  </form>
-  </body>
-  </html>
+        <div>
+            <input type="radio" name="language" value="java">
+            <label>Java</label>
+        </div>
+        <div>
+            <input type="radio" name="language" value="python">
+            <label>python</label>
+
+            <div>
+                <label>Choose Curry</label>
+                <select name="curry">
+                    <option disabled selected>Choose One</option>
+                    <option value="daal">Daal Fry</option>
+                    <option value="sambar">Sambar Curry</option>
+
+                </select>
+
+                <div>
+                    <label>Upload File</label>
+                    <input type="file" name="pic">
+
+                </div>
+            </div>
+        </div>
+
+
+        <input type="submit" value="Submit Form">
+    </form>
+</body>
+
+</html>
