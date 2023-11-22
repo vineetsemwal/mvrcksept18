@@ -1,4 +1,7 @@
-
+/**
+ * object literal
+ * 
+ */
 var addressDetails={city:"bangalore", state:"karnataka"};
 var pet1={uname:"scooby", age:5,
 

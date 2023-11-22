@@ -1,3 +1,6 @@
+/**
+ * dynamically fields can be added to existing objects
+ */
 var ajayObj={};   
 ajayObj.username="ajay";
 ajayObj.age=21;
