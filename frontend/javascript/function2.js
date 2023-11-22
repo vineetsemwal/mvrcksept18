@@ -10,4 +10,3 @@ function printUser(userArg){
 
 var user={name:"archana",state:"tamilnadu"};
 printUser(user);
-
