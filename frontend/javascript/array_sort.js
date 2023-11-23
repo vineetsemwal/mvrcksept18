@@ -10,7 +10,7 @@ var user1 = {
     name: "ajay"
 }
 
-var user2 = {
+var user = {
     id: 2,
     name: "hemanth"
 }
@@ -18,6 +18,7 @@ var users=[user2,user1];
 
 
 
+// passed function is called on every element of array
 users.sort(function(userArg1, userArg2){
     return userArg1.id-userArg2.id;
     });
