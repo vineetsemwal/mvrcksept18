@@ -1,0 +1,21 @@
+
+declare a store for products
+
+ProductMangement
+{
+store:Product []
+
+addProduct(name,price)
+
+findByName(name)
+
+}
+
+
+Product{
+name : string
+
+price: number
+
+
+}
