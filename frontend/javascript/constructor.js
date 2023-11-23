@@ -1,3 +1,6 @@
+/*
+constructor demo
+*/
 function User(nameArg, ageArg){
     this.name=nameArg;
     this.age=ageArg;
