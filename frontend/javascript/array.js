@@ -20,18 +20,20 @@ function printVegs(){
 }
 printVegs();
 
-//remove last element of array
-vegs.pop();
-
+//get last element and remove last element of array
+var lastElement=vegs.pop();
+console.log("lastelement="+lastElement);
 
 console.log("adding element at a later time");
 
+
 function addVegetable(vegName){
+//adds element at the end of array
     vegs.push(vegName);
 }
 
 addVegetable("brinjal");
-//set new element at an index 0, overwriting porevious one
+//set new element at an index 0, overwriting previous one
 vegs[0]="onion";
 
 
