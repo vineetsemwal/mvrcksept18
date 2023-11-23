@@ -10,7 +10,7 @@ var user1 = {
     name: "ajay"
 }
 
-var user = {
+var user2 = {
     id: 2,
     name: "hemanth"
 }
@@ -18,10 +18,9 @@ var users=[user2,user1];
 
 
 
-const comparator=function(userArg1, userArg2){
-return userArg1.id-userArg2.id;
-}
-users.sort(comparator);
+users.sort(function(userArg1, userArg2){
+    return userArg1.id-userArg2.id;
+    });
 
 for(var i=0;i<users.length;i++){
     var user=users[i];
