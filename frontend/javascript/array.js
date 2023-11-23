@@ -20,6 +20,10 @@ function printVegs(){
 }
 printVegs();
 
+//remove last element of array
+vegs.pop();
+
+
 console.log("adding element at a later time");
 
 function addVegetable(vegName){
