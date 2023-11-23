@@ -27,7 +27,8 @@ function addVegetable(vegName){
 }
 
 addVegetable("brinjal");
+//set new element at an index 0, overwriting porevious one
+vegs[0]="onion";
 
-printVegs()
 
 
