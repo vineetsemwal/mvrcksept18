@@ -21,7 +21,8 @@ class Employee{
     }
 
 }
-const emp=new Employee(1,"sampath");
+//const emp=new Employee(1,"sampath");
+const emp={id:1,name:"sampath"};
 const id=emp.id;
 console.log("id="+id);
 emp.id=10;
