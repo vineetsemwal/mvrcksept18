@@ -1,3 +1,6 @@
+/*
+classes, inheritance
+*/
 class Employee{
 
     static count=0;
