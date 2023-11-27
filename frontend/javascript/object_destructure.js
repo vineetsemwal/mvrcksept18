@@ -18,3 +18,4 @@ const product={name:"samsung", price:20000};
 const{name:nameVal,price:productVal}=product;
 
 console.log("name="+nameVal+"- product="+productVal);
+
