@@ -35,6 +35,18 @@ function fetchAll(){
     })
 }
 
+async function addUser(username,age){
+    const requestData={
+        "username" : username,
+        "age":age
+    };
+    const promise=axios.post(baseUrl,requestData);
+    const response=await promise;
+    const user=await response.data;
+    console.log("user got added=",user);
+}
+addUser();
+
 console.log("****fetching all");
 fetchAll();
 
