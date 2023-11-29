@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+
+    <script type="application/javascript">
+        const user = {};
+        const url="http://localhost:3000/users"
+        let usernameElement;
+        let ageElement;
+        let btn;
+        let feedbackElement;
+
+        function register() {
+            console.log("inside register");
+            usernameElement = document.getElementById("username");
+            ageElement = document.getElementById("age");
+            btn = document.getElementById("submitBtn");
+            feedbackElement = document.getElementById("feedback");
+            console.log("btn", btn);
+            console.log("feedback", feedbackElement);
+            btn.addEventListener("click", submitHandler);
+        }
+
+        function submitHandler(event) {
+            event.preventDefault();
+            console.log("inside submit handler");
+            user.age = ageElement.value;
+            user.username = usernameElement.value;
+            console.log("user object=", user);
+            let promise=axios.post(url,user);
+            promise.then((response)=>{
+               const result =response.data;
+               console.log("result from add to server",result);
+               feedbackElement.innerHTML = "<h3>"+result.id +"-"+ result.username + "-" + result.age + "</h3>";
+            });
+
+          
+        }
+
+        window.addEventListener("DOMContentLoaded", register);
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Register user in the server</h1>
+
+
+    <form>
+        <div>
+            <label>username</label>
+            <input id="username" name="username">
+        </div>
+
+        <div>
+            <label>Age</label>
+            <input id="age" name="age" type="number">
+        </div>
+
+        <button id="submitBtn" type="button">Submit</button>
+
+
+    </form>
+    <div id="feedback">
+
+    </div>
+
+</body>
+
+</html>
+<!--
+DOMContentLoaded
+-->
