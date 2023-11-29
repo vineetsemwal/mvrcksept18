@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  <script  type="application/javascript">
+    
+    let btn;
+    let display;
+
+    function register(){          
+     btn=document.getElementById("btn");
+    display=document.getElementById("display");
+    btn.addEventListener("click",clickHandler);
+    }
+
+
+   function clickHandler(){
+     console.log("inside click handler");
+     display.innerHTML="New Data";
+     
+   }
+
+   window.addEventListener("DOMContentLoaded",register);
+   
+   
+
+
+
+ </script>
+    
+  </head>
+
+  <body>
+    <h1>Click button to change data</h1>
+    <div id="display">
+      <h1>Old Data</h1>
+    </div>
+
+    <button id="btn" >Click me</button>
+  </body>
+
+</html>
+<!--
+DOMContentLoaded
+-->

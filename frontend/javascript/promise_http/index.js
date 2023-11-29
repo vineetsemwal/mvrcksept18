@@ -13,15 +13,16 @@ function fetchUserById(id){
     });
     
     promise.then(successFun);
+    console.log("success");
 }
 */
 
-async function fetchUserById(id){
+ async function fetchUserById(id){
     const url=baseUrl+"/"+id;
     console.log("url=",url);
     const promise=axios.get(url);
-    const response=await promise;
-    const user=await response.data;
+    const response=await promise;// blocking wait till response is available
+    const user=await response.data;// blocking wait till data is available
     console.log("user=",user);
 }
 
@@ -35,14 +36,14 @@ function fetchAll(){
     })
 }
 
-async function addUser(username,age){
+ async function addUser(username,age){
     const requestData={
         "username" : username,
         "age":age
     };
     const promise=axios.post(baseUrl,requestData);
-    const response=await promise;
-    const user=await response.data;
+    const response=await promise;// blocking wait for response
+    const user=await response.data;//blocking wait
     console.log("user got added=",user);
 }
 addUser();
