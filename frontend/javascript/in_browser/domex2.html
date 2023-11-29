@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  <script  type="application/javascript">
+ 
+  let desc;
+  let feedback;
+
+  function register(){
+    console.log("inside register");
+    desc=document.getElementById("description");
+    feedback=document.getElementById("feedback");
+    desc.addEventListener("change",changeField);
+  }
+
+  function changeField(){
+    console.log("inside changefield");
+   feedback.innerHTML=desc.value;
+  }
+ 
+   window.addEventListener("DOMContentLoaded",register);
+   
+
+ </script>
+    
+  </head>
+
+  <body>
+    <h1>Click button to change data</h1>
+   
+
+    <form>
+    <input id="description" name="description" >
+
+    </form>
+    <div id="feedback">
+       
+      </div>
+
+  </body>
+
+</html>
+<!--
+DOMContentLoaded
+-->
