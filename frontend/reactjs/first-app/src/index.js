@@ -1,20 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { UserDetails } from './UserDetails';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-const user={id:1, name:"mahesh"}
+const e=document.getElementById('root');
+const root = ReactDOM.createRoot(e);
+const user={name:"sampath anna", age:25};
 root.render(
   <React.StrictMode>
-    <div>
-      <h1>Hello World</h1>
-      1+1 = {1+1}
-<br></br>
 
-id is {user.id} , name is {user.name} 
-    </div>
+  <div>
+    5 multiplied by 7= {5*7}
+  </div>
+  <br/>
+  User Details Component below
+  <UserDetails />
+
+  User Details Component above
+
   </React.StrictMode>
 );
 
