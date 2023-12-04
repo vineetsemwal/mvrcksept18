@@ -1,0 +1,1 @@
+create a IncrementBy10 component where on every click , value of counter is incremented by 10

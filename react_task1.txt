@@ -1,0 +1,12 @@
+create ProductDetails component which renders product information , 
+use it to display from product array containing 3 products
+
+product example below
+{
+id:1,
+name:"samsung",
+price:200000
+
+}
+
+
