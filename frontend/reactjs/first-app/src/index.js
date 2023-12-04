@@ -3,21 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { UserDetails } from './UserDetails';
+import { App } from './App';
 
 const e=document.getElementById('root');
 const root = ReactDOM.createRoot(e);
-const user={name:"sampath anna", age:25};
+
 root.render(
   <React.StrictMode>
-
-  <div>
-    5 multiplied by 7= {5*7}
-  </div>
-  <br/>
-  User Details Component below
-  <UserDetails />
-
-  User Details Component above
+<App/>
 
   </React.StrictMode>
 );
