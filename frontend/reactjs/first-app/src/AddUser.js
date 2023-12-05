@@ -7,23 +7,15 @@ export class AddUser extends Component {
    }
 
     changeNameHandler=(event)=>{
+        const fieldName=event.target.name;
         const fieldValue=event.target.value;
         console.log("event", event.target.value);
         //this.user.name=fieldValue;
-        const newState={...this.state, name:fieldValue};
+        const newState={...this.state, [fieldName]:fieldValue};
         this.setState(newState);
         
     }
 
-    changeAgeHandler=(event)=>{
-        const fieldValue=event.target.value;
-        console.log("event", event.target.value);
-        //this.user.name=fieldValue;
-        const newState={...this.state, age:fieldValue};
-        console.log("new state obj after sge change=",newState);
-        this.setState(newState);
-        
-    }
 
     render() {
         return (
@@ -48,7 +40,7 @@ export class AddUser extends Component {
 
  Name is {this.state.name}
 
- Age is {this.state.age}
+ Age is{this.state.age}
 
 </div>
 

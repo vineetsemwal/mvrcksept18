@@ -4,23 +4,23 @@ import { ClickCounter } from "./ClickCounter";
 import { AddUser } from "./AddUser";
 
 export class App extends Component {
-    user1={name:"archana", age:21};
-    project1={projectName:"telephony app", skill:"core java"};
-    project2={projectName:"financial app", skill:"Java enterprise"};
-    user2={name:"megha", age:21};
+
+    users = [
+        { name: "archana", age: 23 },
+        { name: "megha", age: 22 },
+        { name: "kushal", age: 21 }
+    ]
+    mapFun=(user) => (
+        <div>
+            <UserDetails user={user} />
+        </div>);
     render() {
         return (<div>
             <h3> App Component</h3>
             {
-
-           // <UserDetails user={this.user1} project={this.project1} />
-
-           // <UserDetails user={this.user2} project={this.project2}/>
-           //<ClickCounter/>
+                this.users.map(this.mapFun)
             }
 
-            <AddUser/>
-            
         </div>)
     }
 }
