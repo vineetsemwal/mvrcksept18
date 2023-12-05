@@ -4,13 +4,16 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { UserDetails } from './UserDetails';
 import { App } from './App';
-
 const e=document.getElementById('root');
 const root = ReactDOM.createRoot(e);
 
+const user={username:"kushal", age:21};
 root.render(
   <React.StrictMode>
-<App/>
+    <div>
+     <App/>
+    </div>
+
 
   </React.StrictMode>
 );

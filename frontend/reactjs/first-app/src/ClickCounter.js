@@ -5,26 +5,29 @@ import { Component } from "react";
  */
 export class ClickCounter extends Component {
 
+     
+
     constructor(props){
-        super(props);        
-        this.state={counter:0};
+        super(props);         
+        this.state={count:0};       
 
     }
 
-    clickHandler=()=>{
-        const newState={counter:this.state.counter+1};
-        this.setState(newState);
-        console.log("counter is "+newState.counter);
+
+    incrementHandler=()=>{
+        const newState={count: ++this.state.count};
+       this.setState(newState);
+        console.log("counter is ", newState);
     }
+    
     render() {
 
         return (
             <div>
-                <h3>Click Counter </h3>
-                Counter is {this.state.counter} 
-                <br/>
-
-                <button onClick={this.clickHandler}>Increment Counter</button>
+                <h3>Click Counter</h3>
+              Count is {this.state.count}
+<br/>
+              <button onClick={this.incrementHandler}> Increment Count</button>
             </div>
 
         );

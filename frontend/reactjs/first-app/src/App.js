@@ -10,12 +10,12 @@ export class App extends Component {
     render() {
         return (<div>
             <h3> App Component</h3>
-            
+            {
 
-            <UserDetails user={this.user1} project={this.project1} />
+           // <UserDetails user={this.user1} project={this.project1} />
 
-            <UserDetails user={this.user2} project={this.project2}/>
-
+           // <UserDetails user={this.user2} project={this.project2}/>
+            }
             <ClickCounter/>
         </div>)
     }
