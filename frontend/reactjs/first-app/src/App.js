@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { UserDetails } from "./UserDetails";
 import { ClickCounter } from "./ClickCounter";
+import { AddUser } from "./AddUser";
 
 export class App extends Component {
     user1={name:"archana", age:21};
@@ -15,8 +16,11 @@ export class App extends Component {
            // <UserDetails user={this.user1} project={this.project1} />
 
            // <UserDetails user={this.user2} project={this.project2}/>
+           //<ClickCounter/>
             }
-            <ClickCounter/>
+
+            <AddUser/>
+            
         </div>)
     }
 }
