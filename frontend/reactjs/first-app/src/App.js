@@ -5,6 +5,7 @@ import { AddUser } from "./AddUser";
 import { TableDemo } from "./TableDemo";
 import { ClickCounterFunction } from "./ClickCounterFunction";
 import { UserDetailsFunctional } from "./UseDetailsFunctional";
+import { AddUserFunctional } from "./AddUserFunctional";
 
 export function App () {
 
@@ -17,9 +18,11 @@ export function App () {
    
         return (
             <div>
-           { /*<ClickCounterFunction/> */   }
+           { /*<ClickCounterFunction/> 
             <UserDetailsFunctional user={users[0]} />
             <UserDetailsFunctional user={users[1]} />
+        */}
+        <AddUserFunctional/>
         </div>)
     
 }
