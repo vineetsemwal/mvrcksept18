@@ -5,16 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import { UserDetails } from './UserDetails';
 import { App } from './App';
 import { LifeCycleCmp } from './LifecycleCmp';
+import { TableColumns } from './TableColumns';
 const e=document.getElementById('root');
 const root = ReactDOM.createRoot(e);
 
 const user={username:"kushal", age:21};
 root.render(
   <React.StrictMode>
-    <div>
-    <LifeCycleCmp/>
-    </div>
-
+<App/>
 
   </React.StrictMode>
 );

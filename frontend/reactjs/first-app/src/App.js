@@ -2,6 +2,7 @@ import { Component } from "react";
 import { UserDetails } from "./UserDetails";
 import { ClickCounter } from "./ClickCounter";
 import { AddUser } from "./AddUser";
+import { TableDemo } from "./TableDemo";
 
 export class App extends Component {
 
@@ -20,6 +21,8 @@ export class App extends Component {
             {
                 this.users.map(this.mapFun)
             }
+
+            <TableDemo/>
 
         </div>)
     }
