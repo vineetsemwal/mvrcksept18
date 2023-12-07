@@ -9,6 +9,8 @@ import { AddUserFunctional } from "./AddUserFunctional";
 import { CounterChild } from "./passinghandler/CounterChild";
 import { ParentSimple } from "./passinghandler/ParentSimple";
 import { ParentCounterChild } from "./passinghandler/ParentCounterChild";
+import { ConditionalRender1 } from "./ConditionalRender1";
+import { ConditionalRender2 } from "./ConditionalRender2";
 
 export function App () {
 
@@ -27,8 +29,12 @@ export function App () {
              <AddUserFunctional/>
  <ClickCounterFunction/> 
    <ParentSimple/>
-        */}
+   
        <ParentCounterChild/>
+        <ConditionalRender1/>
+        */}
+
+       <ConditionalRender2/>
   
         </div>)
     

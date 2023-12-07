@@ -3,8 +3,8 @@ import { CounterChild } from "./CounterChild";
 import { CounterChild2 } from "./CounterChild2";
 
 export function ParentCounterChild(){
-
-    const [currentState, setNewState] = useState({ count: 0 });
+const initState={ count: 0 };
+    const [currentState, setNewState] = useState(initState);
 
     const incrementHandlerFun = () => {
         console.log("inside increment handler fun");
