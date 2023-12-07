@@ -6,7 +6,7 @@ export function CounterChild({incrementHandler,currentState}) {
 
     return (
         <div>
-            <h3>Counter Child</h3>
+            <h3>Counter Child 1</h3>
             Count is {currentState.count}
             <br/>
 

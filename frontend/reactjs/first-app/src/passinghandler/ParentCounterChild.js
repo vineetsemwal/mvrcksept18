@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CounterChild } from "./CounterChild";
+import { CounterChild2 } from "./CounterChild2";
 
 export function ParentCounterChild(){
 
@@ -15,6 +16,7 @@ return(
 <div>
     <h3>Parent Count Component</h3>
     <CounterChild  incrementHandler={incrementHandlerFun} currentState={currentState}/>
+    <CounterChild2   currentState={currentState}/>
 </div>
 ); 
 
