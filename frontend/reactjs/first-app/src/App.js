@@ -6,6 +6,9 @@ import { TableDemo } from "./TableDemo";
 import { ClickCounterFunction } from "./ClickCounterFunction";
 import { UserDetailsFunctional } from "./UseDetailsFunctional";
 import { AddUserFunctional } from "./AddUserFunctional";
+import { CounterChild } from "./passinghandler/CounterChild";
+import { ParentSimple } from "./passinghandler/ParentSimple";
+import { ParentCounterChild } from "./passinghandler/ParentCounterChild";
 
 export function App () {
 
@@ -21,8 +24,12 @@ export function App () {
            { /*<ClickCounterFunction/> 
             <UserDetailsFunctional user={users[0]} />
             <UserDetailsFunctional user={users[1]} />
+             <AddUserFunctional/>
+ <ClickCounterFunction/> 
+   <ParentSimple/>
         */}
-        <AddUserFunctional/>
+       <ParentCounterChild/>
+  
         </div>)
     
 }
