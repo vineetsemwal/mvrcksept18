@@ -12,19 +12,21 @@ import { ParentCounterChild } from "./passinghandler/ParentCounterChild";
 import { ConditionalRender1 } from "./ConditionalRender1";
 import { ConditionalRender2 } from "./ConditionalRender2";
 import { ConditionalRender3 } from "./ConditionalRender3";
+import { UserProvider, UserConsumer } from "./UserContext";
+import { ContextParent } from "./contextdemo/ContextParent";
 
-export function App () {
+export function App() {
 
     const users = [
-        {id:1, name: "archana", age: 23 },
-        {id:2, name: "megha", age: 22 },
-        {id:3, name: "kushal", age: 21 }
+        { id: 1, name: "archana", age: 23 },
+        { id: 2, name: "megha", age: 22 },
+        { id: 3, name: "kushal", age: 21 }
     ]
 
-   
-        return (
-            <div>
-           { /*<ClickCounterFunction/> 
+
+    return (
+        <div>
+            { /*<ClickCounterFunction/> 
             <UserDetailsFunctional user={users[0]} />
             <UserDetailsFunctional user={users[1]} />
              <AddUserFunctional/>
@@ -34,10 +36,12 @@ export function App () {
        <ParentCounterChild/>
         <ConditionalRender1/>
           <ConditionalRender2/>
+            <ConditionalRender3/>
         */}
+            <UserProvider value={users[2]}>
 
-     <ConditionalRender3/>
-  
+                <ContextParent />
+            </UserProvider>
         </div>)
-    
+
 }
