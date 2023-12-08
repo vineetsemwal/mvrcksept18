@@ -6,28 +6,28 @@ export function ConditionalRender2() {
         setNewState(!onFlag);
     }
 
-return(
-onFlag?(
-    
-        <div>
-            <button onClick={changeButtonState}>Switch Off</button>
-            <h5>
-                Fan is switched on, if you are going out, swicth off
-            </h5>
+    return (
+        onFlag ? (
 
-        </div>
-        
-):(
-<div>
-            <button onClick={changeButtonState}>Switch On</button>
             <div>
-                Fan is Switch off , Please switch on {onFlag}
+                <button onClick={changeButtonState}>Switch Off</button>
+                <h5>
+                    Fan is switched on, if you are going out, swicth off
+                </h5>
+
             </div>
 
-        </div>
-)
-)
+        ) : (
+            <div>
+                <button onClick={changeButtonState}>Switch On</button>
+                <div>
+                    Fan is Switch off , Please switch on {onFlag}
+                </div>
+
+            </div>
+        )
+    )
 
 
-  
+
 }

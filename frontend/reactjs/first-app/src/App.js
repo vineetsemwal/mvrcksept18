@@ -11,6 +11,7 @@ import { ParentSimple } from "./passinghandler/ParentSimple";
 import { ParentCounterChild } from "./passinghandler/ParentCounterChild";
 import { ConditionalRender1 } from "./ConditionalRender1";
 import { ConditionalRender2 } from "./ConditionalRender2";
+import { ConditionalRender3 } from "./ConditionalRender3";
 
 export function App () {
 
@@ -32,9 +33,10 @@ export function App () {
    
        <ParentCounterChild/>
         <ConditionalRender1/>
+          <ConditionalRender2/>
         */}
 
-       <ConditionalRender2/>
+     <ConditionalRender3/>
   
         </div>)
     
