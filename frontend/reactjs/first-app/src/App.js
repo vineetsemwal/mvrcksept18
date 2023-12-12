@@ -15,7 +15,8 @@ import { ConditionalRender3 } from "./ConditionalRender3";
 import { UserProvider, UserConsumer } from "./UserContext";
 import { ContextParent } from "./contextdemo/ContextParent";
 import RefDemo from "./refdemo/refDemo";
-import CssDemo from "./cssdemo/CssDemo";
+import CssDemo from "./cssdemo/StyleDemo";
+import StyleDemo from "./cssdemo/StyleDemo";
 
 export function App() {
 
@@ -44,11 +45,12 @@ export function App() {
                 <ContextParent />
             </UserProvider>
               <CssDemo />
+              
+<RefDemo/>
         */}
 
-<RefDemo/>
 
-          
+          <StyleDemo/>
 
 
         </div>)
