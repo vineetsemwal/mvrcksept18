@@ -14,6 +14,7 @@ import { ConditionalRender2 } from "./ConditionalRender2";
 import { ConditionalRender3 } from "./ConditionalRender3";
 import { UserProvider, UserConsumer } from "./UserContext";
 import { ContextParent } from "./contextdemo/ContextParent";
+import RefDemo from "./refdemo/refDemo";
 
 export function App() {
 
@@ -37,11 +38,14 @@ export function App() {
         <ConditionalRender1/>
           <ConditionalRender2/>
             <ConditionalRender3/>
-        */}
-            <UserProvider value={users[2]}>
+                        <UserProvider value={users[2]}>
 
                 <ContextParent />
             </UserProvider>
+        */}
+
+        <RefDemo/>
+
         </div>)
 
 }
