@@ -20,6 +20,8 @@ import CssDemo from "./cssdemo/CssDemo";
 import EvenComponent from "./errorhandler/evenComponment";
 import Hello from "./errorhandler/hello";
 import ErrorHandling from "./errorhandler/errorHandling";
+import BigClickCounter from "./hoc/BigClickCounter";
+import SmallClickCounter from "./hoc/SmallClickCounter";
 
 export function App() {
 
@@ -52,14 +54,19 @@ export function App() {
 <RefDemo/>
  <StyleDemo/>
      <CssDemo/>
-
-        */}
-
+     
 <Hello/>
 
 <ErrorHandling>
      <EvenComponent number={19}/>
      </ErrorHandling>
+
+        */}
+
+<BigClickCounter />
+
+<SmallClickCounter/>
+
         </div>)
 
 }
