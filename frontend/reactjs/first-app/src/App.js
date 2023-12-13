@@ -17,6 +17,9 @@ import { ContextParent } from "./contextdemo/ContextParent";
 import RefDemo from "./refdemo/refDemo";
 import StyleDemo from "./cssdemo/StyleDemo";
 import CssDemo from "./cssdemo/CssDemo";
+import EvenComponent from "./errorhandler/evenComponment";
+import Hello from "./errorhandler/hello";
+import ErrorHandling from "./errorhandler/errorHandling";
 
 export function App() {
 
@@ -48,12 +51,15 @@ export function App() {
               
 <RefDemo/>
  <StyleDemo/>
+     <CssDemo/>
+
         */}
 
+<Hello/>
 
-         <CssDemo/>
-
-
+<ErrorHandling>
+     <EvenComponent number={19}/>
+     </ErrorHandling>
         </div>)
 
 }
