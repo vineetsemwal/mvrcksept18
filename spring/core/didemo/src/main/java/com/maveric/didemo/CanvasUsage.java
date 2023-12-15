@@ -1,13 +1,23 @@
 package com.maveric.didemo;
 
+import com.maveric.didemo.beans.Canvas;
+import com.maveric.didemo.beans.Circle;
+import com.maveric.didemo.beans.IShape;
+import com.maveric.didemo.beans.Square;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class CanvasUsage {
     public static void main(String[] args) {
-        IShape square1=new Square(6);
-        Canvas canvas1=new Canvas(square1);
-        canvas1.drawShape();
+        ApplicationContext context=new AnnotationConfigApplicationContext(JavaConfig.class);
+        Canvas canvas=context.getBean(Canvas.class);
+        canvas.drawShape();
 
-        IShape square2=new Circle(8);
-        Canvas canvas2=new Canvas(square2);
-        canvas2.drawShape();
+
+
+        IShape square=context.getBean(Square.class);
+        System.out.println("square fetched="+square.getClass());
+
+
     }
 }

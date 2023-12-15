@@ -1,6 +1,6 @@
-package com.maveric.didemo;
+package com.maveric.didemo.beans;
 
-public class Circle implements IShape{
+public class Circle implements IShape {
     private double radius;
     public Circle(double radius){
         this.radius=radius;

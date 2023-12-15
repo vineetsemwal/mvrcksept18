@@ -1,6 +1,10 @@
-package com.maveric.didemo;
+package com.maveric.didemo.beans;
 
-public class Square implements IShape{
+import com.maveric.didemo.beans.IShape;
+import org.springframework.stereotype.Component;
+
+//@Component
+public class Square implements IShape {
     private double side;
     public Square(){}
     public Square(double side){

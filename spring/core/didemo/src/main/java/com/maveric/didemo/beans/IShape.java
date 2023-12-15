@@ -1,4 +1,4 @@
-package com.maveric.didemo;
+package com.maveric.didemo.beans;
 
 public interface IShape {
 
