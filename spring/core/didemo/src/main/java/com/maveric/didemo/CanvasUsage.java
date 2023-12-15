@@ -15,8 +15,8 @@ public class CanvasUsage {
 
 
 
-        IShape square=context.getBean(Square.class);
-        System.out.println("square fetched="+square.getClass());
+        Square square=context.getBean(Square.class);
+        System.out.println("square fetched side=="+square.getSide());
 
 
     }
