@@ -3,10 +3,16 @@ package com.maveric.customerms.service;
 import com.maveric.customerms.dao.CustomerDaoImpl;
 import com.maveric.customerms.dao.ICustomerDao;
 import com.maveric.customerms.domain.Customer;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class CustomerServiceImpl implements ICustomerService{
-    private ICustomerDao customerDao=new CustomerDaoImpl();
+    private ICustomerDao customerDao;
+
+    public CustomerServiceImpl(ICustomerDao dao){
+        this.customerDao=dao;
+    }
 
     private int generatedId;
 

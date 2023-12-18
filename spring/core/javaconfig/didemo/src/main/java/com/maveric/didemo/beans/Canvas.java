@@ -12,7 +12,9 @@ import javax.annotation.PostConstruct;
 //@Scope("prototype")
 @Component
 public class Canvas {
-    @Autowired
+
+
+    //@Autowired
     private ApplicationContext context;
 
    @Qualifier("square")
