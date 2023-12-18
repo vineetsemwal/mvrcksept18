@@ -8,6 +8,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Iterator;
+
 public class CanvasUsage {
     public static void main(String[] args) {
         ConfigurableApplicationContext context=new AnnotationConfigApplicationContext(JavaConfig.class);
@@ -20,6 +22,11 @@ public class CanvasUsage {
             System.out.println("different objects");
         }
 
+       Iterator<String>beanNamesIterator =context.getBeanFactory().getBeanNamesIterator();
+    while (beanNamesIterator.hasNext()){
+        String beanName=beanNamesIterator.next();
+        System.out.println("bean name="+beanName);
+    }
 
 
 
