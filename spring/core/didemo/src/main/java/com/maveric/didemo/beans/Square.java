@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 //@Component
 public class Square implements IShape {
@@ -19,6 +20,11 @@ public class Square implements IShape {
     @PostConstruct
     public void afterInit(){
         System.out.println("***inside Square after initialization side="+side);
+    }
+
+    @PreDestroy
+    public  void beforeRemoval(){
+        System.out.println("****square object to be removed from container");
     }
 
 
