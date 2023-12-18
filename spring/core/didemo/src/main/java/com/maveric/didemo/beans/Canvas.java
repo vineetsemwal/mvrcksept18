@@ -2,12 +2,15 @@ package com.maveric.didemo.beans;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Scope("prototype")
+//@Scope("prototype")
 @Component
 public class Canvas {
+
+   @Qualifier("square")
     @Autowired
     private IShape shape;
 /*
