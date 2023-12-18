@@ -12,23 +12,21 @@ import java.util.Iterator;
 
 public class CanvasUsage {
     public static void main(String[] args) {
-        ConfigurableApplicationContext context=new AnnotationConfigApplicationContext(JavaConfig.class);
-        Canvas canvas1=context.getBean(Canvas.class);
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+        Canvas canvas1 = context.getBean(Canvas.class);
         canvas1.drawShape();
-        Canvas canvas2=context.getBean("canvas",Canvas.class);
-        if (canvas1==canvas2){
+        Canvas canvas2 = context.getBean("canvas", Canvas.class);
+        if (canvas1 == canvas2) {
             System.out.println("same object");
-        }else {
+        } else {
             System.out.println("different objects");
         }
 
-       Iterator<String>beanNamesIterator =context.getBeanFactory().getBeanNamesIterator();
-    while (beanNamesIterator.hasNext()){
-        String beanName=beanNamesIterator.next();
-        System.out.println("bean name="+beanName);
-    }
-
-
+        Iterator<String> beanNamesIterator = context.getBeanFactory().getBeanNamesIterator();
+        while (beanNamesIterator.hasNext()) {
+            String beanName = beanNamesIterator.next();
+            System.out.println("bean name=" + beanName);
+        }
 
 
 /*
