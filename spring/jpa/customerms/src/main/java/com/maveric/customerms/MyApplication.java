@@ -17,10 +17,8 @@ public class MyApplication {
     public static void main(String[] args) {
         ApplicationContext context=new AnnotationConfigApplicationContext(JavaConfig.class);
         Frontend frontend = context.getBean(Frontend.class);
-        String result1 = frontend.registerAndDisplay("rahul");
-        System.out.println(result1);
-        String result2 = frontend.registerAndDisplay("govind");
-        System.out.println(result2);
+        frontend.registerAndDisplay("rahul");
+        frontend.registerAndDisplay("govind");
     }
 
 
