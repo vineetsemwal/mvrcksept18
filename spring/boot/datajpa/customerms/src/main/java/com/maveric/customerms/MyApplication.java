@@ -22,6 +22,8 @@ public class MyApplication {
         Frontend frontend = context.getBean(Frontend.class);
         frontend.registerAndDisplay("rahul");
         frontend.registerAndDisplay("govind");
+
+
     }
 
 

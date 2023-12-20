@@ -2,12 +2,10 @@ package com.maveric.customerms.domain;
 
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Objects;
+import java.util.Set;
 
 @Table(name = "customers")
 
@@ -16,7 +14,13 @@ public class Customer {
     @GeneratedValue
     @Id
     private Long id;
+    @Column(name = "cname")
     private String name;
+
+    private int age;
+
+    @OneToOne
+    private Account account;
 
     public Customer(){}
     public Customer(long id,String name){
@@ -39,6 +43,20 @@ public class Customer {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+
 
     @Override
     public boolean equals(Object o) {

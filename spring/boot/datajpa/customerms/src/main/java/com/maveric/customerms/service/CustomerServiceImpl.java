@@ -8,6 +8,7 @@ import com.maveric.customerms.exceptions.InvalidIDException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Transactional
@@ -44,4 +45,9 @@ public class CustomerServiceImpl implements ICustomerService{
       return optional.get();
     }
 
+    @Override
+    public List<Customer> findCustomersByName(String name) {
+      List<Customer>list=  customerDao.findByName(name);
+      return list;
+    }
 }
