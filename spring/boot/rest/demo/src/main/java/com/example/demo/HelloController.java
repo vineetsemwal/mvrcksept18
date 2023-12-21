@@ -1,10 +1,13 @@
 package com.example.demo;
 
+import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
+
+@RequestMapping("/customers")
 @RestController
 public class HelloController {
 
@@ -21,16 +24,12 @@ public class HelloController {
     public long generateId(){
         return ++generatedId;
     }
-    @GetMapping("/greet")
-    public String greetUser(){
-        return "welcome to REST";
-    }
 
 
     /**
-     *  /users/1
+     *  /customers/1
      */
-    @GetMapping("/customers/{id}")
+    @GetMapping("/{id}")
     public Customer findCustomerById(@PathVariable  long id){
         System.out.println("store="+store);
         System.out.println("***inside findCustomerById id="+id);
@@ -40,8 +39,10 @@ public class HelloController {
     }
 
 
-
-    @PostMapping("/customers")
+/*
+     /customers
+ */
+    @PostMapping
     public Customer create(@RequestBody Customer customer){
        long newId= generateId();
        customer.setId(newId);
@@ -49,13 +50,19 @@ public class HelloController {
        return customer;
     }
 
-    @PutMapping("/customers")
+    /*
+     /customers
+ */
+    @PutMapping
     public Customer update(@RequestBody Customer customer){
         store.put(customer.getId(),customer);
         return customer;
     }
 
-    @DeleteMapping("/customers/{id}")
+    /*
+     /customers/1
+ */
+    @DeleteMapping("/{id}")
     public String deleteCustomer(@PathVariable long id){
         store.remove(id);
         return "customer removed";
