@@ -39,12 +39,26 @@ public class HelloController {
        return customer;
     }
 
-    @PostMapping("/customers/add")
+
+
+    @PostMapping("/customers")
     public Customer create(@RequestBody Customer customer){
        long newId= generateId();
        customer.setId(newId);
        store.put(newId,customer);
        return customer;
+    }
+
+    @PutMapping("/customers")
+    public Customer update(@RequestBody Customer customer){
+        store.put(customer.getId(),customer);
+        return customer;
+    }
+
+    @DeleteMapping("/customers/{id}")
+    public String deleteCustomer(@PathVariable long id){
+        store.remove(id);
+        return "customer removed";
     }
 
 }
