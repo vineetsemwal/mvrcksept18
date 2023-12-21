@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -42,6 +43,7 @@ public class HelloController {
 /*
      /customers
  */
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public Customer create(@RequestBody Customer customer){
        long newId= generateId();
