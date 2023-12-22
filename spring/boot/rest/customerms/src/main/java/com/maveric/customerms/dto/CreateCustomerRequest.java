@@ -1,7 +1,17 @@
 package com.maveric.customerms.dto;
 
+import com.maveric.customerms.util.CustomNotBlankAnnotation;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+
 public class CreateCustomerRequest {
+    //@NotBlank(message = "name is not valid")
+    @CustomNotBlankAnnotation(message = "name is not valid")
     private String name;
+
+    @Max(100)
+    @Min(10)
     private int age;
 
     private double balance;

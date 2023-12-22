@@ -4,7 +4,11 @@ import com.maveric.customerms.domain.Customer;
 import com.maveric.customerms.dto.CreateCustomerRequest;
 import com.maveric.customerms.dto.CustomerResponse;
 import com.maveric.customerms.service.ICustomerService;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
 
 @RequestMapping("/customers")
 @RestController
@@ -21,7 +25,7 @@ public class CustomerController {
        return response;
     }
     @PostMapping
-    public CustomerResponse register(@RequestBody CreateCustomerRequest request)throws Exception{
+    public CustomerResponse register(@RequestBody  CreateCustomerRequest request)throws Exception{
        CustomerResponse response =service.register(request);
        return response;
     }

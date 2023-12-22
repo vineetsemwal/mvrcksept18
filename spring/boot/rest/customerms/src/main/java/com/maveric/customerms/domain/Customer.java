@@ -19,7 +19,6 @@ public class Customer {
 
     private int age;
 
-
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 

@@ -1,4 +1,4 @@
-package com.maveric.customerms;
+package com.maveric.customerms.util;
 
 import com.maveric.customerms.domain.Account;
 import com.maveric.customerms.domain.Customer;

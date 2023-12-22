@@ -1,8 +1,7 @@
 package com.maveric.customerms.service;
 
-import com.maveric.customerms.CustomerUtil;
+import com.maveric.customerms.util.CustomerUtil;
 import com.maveric.customerms.dao.ICustomerDao;
-import com.maveric.customerms.domain.Account;
 import com.maveric.customerms.domain.Customer;
 import com.maveric.customerms.dto.CreateCustomerRequest;
 import com.maveric.customerms.dto.CustomerResponse;
