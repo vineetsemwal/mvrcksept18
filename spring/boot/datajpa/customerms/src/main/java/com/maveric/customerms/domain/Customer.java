@@ -19,20 +19,22 @@ public class Customer {
 
     private int age;
 
-    @OneToOne
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 
     public Customer(){}
-    public Customer(long id,String name){
+    public Customer(long id,String name,int age){
         this.id=id;
         this.name=name;
+        this.age=age;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -44,10 +46,6 @@ public class Customer {
         this.name = name;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public int getAge() {
         return age;
     }
@@ -56,7 +54,13 @@ public class Customer {
         this.age = age;
     }
 
+    public Account getAccount() {
+        return account;
+    }
 
+    public void setAccount(Account account) {
+        this.account = account;
+    }
 
     @Override
     public boolean equals(Object o) {
