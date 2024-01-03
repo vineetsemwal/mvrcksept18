@@ -4,7 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
 /*
 @Configuration
@@ -22,7 +26,22 @@ public class MyApplication {
 
 
     }
+    /**
+     *
+     * for handling cross origin requests
+     */
 
+    @Bean
+    public CorsFilter corsFilter(){
+        UrlBasedCorsConfigurationSource src=new UrlBasedCorsConfigurationSource();
+        CorsConfiguration configuration=new CorsConfiguration();
+        configuration.setAllowCredentials(true);
+        configuration.addAllowedHeader("*");
+        configuration.addAllowedOrigin("http://localhost:3000");
+        configuration.addAllowedMethod("*");
+        src.registerCorsConfiguration("/**",configuration);
+        return new CorsFilter(src);
+    }
 
 
 }
