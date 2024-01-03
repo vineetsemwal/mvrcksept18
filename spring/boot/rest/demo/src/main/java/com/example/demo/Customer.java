@@ -2,6 +2,7 @@ package com.example.demo;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Objects;
 
@@ -9,7 +10,9 @@ import java.util.Objects;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Data
+@Slf4j
 public class Customer {
+
 
     @NonNull
     //@Setter(value = AccessLevel.PRIVATE)
@@ -17,11 +20,6 @@ public class Customer {
     @MyValidatorAnnotation
    @NonNull private String name;
     @NonNull private int age;
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
+
+
 }
