@@ -1,6 +1,8 @@
 package com.example.demo;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -9,10 +11,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+@Slf4j
 @RequestMapping("/customers")
 @RestController
 public class HelloController {
-
 
     private Map<Long,Customer>store=new HashMap<>();
 
@@ -33,10 +35,10 @@ public class HelloController {
      */
     @GetMapping("/{id}")
     public Customer findCustomerById(@PathVariable  long id){
-        System.out.println("store="+store);
+        log.info("store="+store);
         System.out.println("***inside findCustomerById id="+id);
        Customer customer= store.get(id);
-        System.out.println("custromer fetched="+customer.getName());
+        log.info("custromer fetched="+customer.getName());
        return customer;
     }
 

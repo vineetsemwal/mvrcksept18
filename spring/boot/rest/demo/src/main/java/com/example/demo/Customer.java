@@ -10,7 +10,6 @@ import java.util.Objects;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Data
-@Slf4j
 public class Customer {
 
 
