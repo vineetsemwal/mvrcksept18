@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -45,7 +46,7 @@ public class HelloController {
  */
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public Customer create(@RequestBody Customer customer){
+    public Customer create(@Valid @RequestBody Customer customer){
        long newId= generateId();
        customer.setId(newId);
        store.put(newId,customer);
@@ -69,5 +70,8 @@ public class HelloController {
         store.remove(id);
         return "customer removed";
     }
+
+
+
 
 }

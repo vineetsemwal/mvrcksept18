@@ -1,59 +1,23 @@
 package com.example.demo;
 
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
+
 import java.util.Objects;
 
+@RequiredArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(of = "id")
+@Data
 public class Customer {
 
+    @NonNull
+    @Setter(value = AccessLevel.PRIVATE)
     private Long id;
+    @MyValidatorAnnotation
     private String name;
+    @NonNull
     private int age;
-
-    public Customer(){}
-    public Customer(long id,String name,int age){
-        this.id=id;
-        this.name=name;
-        this.age=age;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public Long getId(){
-        return id;
-    }
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Customer customer = (Customer) o;
-        return Objects.equals(id, customer.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
     @Override
     public String toString() {
         return "Customer{" +
