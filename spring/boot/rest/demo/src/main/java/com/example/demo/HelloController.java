@@ -20,8 +20,8 @@ public class HelloController {
     private long generatedId=2;
 
     public HelloController(){
-        store.put(1l,new Customer(1,"ajay",21));
-        store.put(2l,new Customer(2,"kushal",21));
+        store.put(1l,new Customer(1l,"ajay",21));
+        store.put(2l,new Customer(2l,"kushal",21));
     }
     public long generateId(){
         return ++generatedId;
@@ -47,6 +47,7 @@ public class HelloController {
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public Customer create(@Valid @RequestBody Customer customer){
+        ObjectMa
        long newId= generateId();
        customer.setId(newId);
        store.put(newId,customer);
