@@ -29,9 +29,6 @@ public class CustomerServiceImpl implements ICustomerService {
     @Transactional
     @Override
     public CustomerResponse register(CreateCustomerRequest request) throws InvalidCustomerNameException {
-        if (request.getName() == null || request.getName().isBlank()) {
-            throw new InvalidCustomerNameException("invalid custoemr name");
-        }
         Customer customer = util.from(request);
         //Account account=customer.getAccount();
         customer = customerDao.save(customer);
@@ -42,10 +39,7 @@ public class CustomerServiceImpl implements ICustomerService {
     @Transactional(readOnly = true)
     @Override
     public CustomerResponse findById(long id) throws CustomerNotFoundException, InvalidIDException {
-        if (id < 1) {
-            throw new InvalidIDException("id is invalid");
-        }
-        Optional<Customer> optional = customerDao.findById(id);
+       Optional<Customer> optional = customerDao.findById(id);
         if (optional.isEmpty()) {
             throw new CustomerNotFoundException("customer nbot found");
         }
