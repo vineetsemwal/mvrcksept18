@@ -1,5 +1,10 @@
 package com.maveric.customerms;
 
+import org.springdoc.core.configuration.SpringDocConfiguration;
+import org.springdoc.core.configuration.SpringDocUIConfiguration;
+import org.springdoc.core.properties.SpringDocConfigProperties;
+import org.springdoc.core.properties.SwaggerUiConfigProperties;
+import org.springdoc.core.providers.ObjectMapperProvider;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -9,6 +14,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+
+import java.util.Optional;
 
 /*
 @Configuration
@@ -21,11 +28,12 @@ public class MyApplication {
 
 
     public static void main(String[] args) {
-        ApplicationContext context= SpringApplication.run(MyApplication.class,args);
-
-
-
+        ApplicationContext context = SpringApplication.run(MyApplication.class, args);
     }
+
+
+
+
     /**
      *
      * for handling cross origin requests
@@ -42,6 +50,29 @@ public class MyApplication {
         src.registerCorsConfiguration("/**",configuration);
         return new CorsFilter(src);
     }
+
+/*
+
+    @Bean
+    SpringDocConfiguration springDocConfiguration(){
+        return new SpringDocConfiguration();
+    }
+
+    @Bean
+    SpringDocConfigProperties springDocConfigProperties() {
+        return new SpringDocConfigProperties();
+    }
+
+    @Bean
+    ObjectMapperProvider objectMapperProvider(SpringDocConfigProperties springDocConfigProperties){
+        return new ObjectMapperProvider(springDocConfigProperties);
+    }
+
+    @Bean
+    SpringDocUIConfiguration SpringDocUIConfiguration(Optional<SwaggerUiConfigProperties> optionalSwaggerUiConfigProperties){
+        return new SpringDocUIConfiguration(optionalSwaggerUiConfigProperties);
+    }
+    */
 
 
 }
