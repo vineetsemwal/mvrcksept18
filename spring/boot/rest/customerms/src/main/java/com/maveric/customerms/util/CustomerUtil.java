@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomerUtil {
 
+    public String method(){
+        String msg="hello";
+        return msg;
+    }
     public Customer from(CreateCustomerRequest request){
         Customer desired=new Customer();
         BeanUtils.copyProperties(request,desired);
