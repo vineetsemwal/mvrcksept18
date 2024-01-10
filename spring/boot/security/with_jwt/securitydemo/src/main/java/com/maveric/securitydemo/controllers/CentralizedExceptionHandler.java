@@ -1,6 +1,7 @@
 package com.maveric.securitydemo.controllers;
 
 import com.maveric.securitydemo.exceptions.CustomerNotFoundException;
+import com.maveric.securitydemo.exceptions.IncorrectCredentialsException;
 import com.maveric.securitydemo.exceptions.InvalidIDException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +28,12 @@ public class CentralizedExceptionHandler {
     @ExceptionHandler({ConstraintViolationException.class, MethodArgumentNotValidException.class})
     public String handleConstraintViolation(Exception e){
     Log.info("handling exception in handleConstraintViolation");
+        return e.getMessage();
+    }
+
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ExceptionHandler(IncorrectCredentialsException.class)
+    public String handleAuthFail(IncorrectCredentialsException e){
         return e.getMessage();
     }
 
