@@ -38,7 +38,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 
         String token = request.getHeader("Authorization");
         if(token==null||token.isBlank()||token.length()<8){
-            response.setStatus(HttpStatus.BAD_REQUEST.value());
+            response.setStatus(HttpStatus.UNAUTHORIZED.value());
             response.getWriter().write("incorrect credentials");
             return;
         }
