@@ -7,7 +7,9 @@ import com.maveric.ecommerce.productms.dtos.ProductDetails;
 import com.maveric.ecommerce.productms.entities.Product;
 import com.maveric.ecommerce.productms.utils.ProductUtil;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderUtil {
 
     private ProductUtil productUtil;
