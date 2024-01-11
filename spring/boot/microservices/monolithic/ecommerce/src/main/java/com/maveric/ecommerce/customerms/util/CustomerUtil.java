@@ -1,9 +1,9 @@
-package com.maveric.customerms.util;
+package com.maveric.ecommerce.customerms.util;
 
-import com.maveric.customerms.domain.Account;
-import com.maveric.customerms.domain.Customer;
-import com.maveric.customerms.dto.CreateCustomerRequest;
-import com.maveric.customerms.dto.CustomerResponse;
+import com.maveric.ecommerce.customerms.domain.Account;
+import com.maveric.ecommerce.customerms.domain.Customer;
+import com.maveric.ecommerce.customerms.dto.CreateCustomerRequest;
+import com.maveric.ecommerce.customerms.dto.CustomerResponse;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
