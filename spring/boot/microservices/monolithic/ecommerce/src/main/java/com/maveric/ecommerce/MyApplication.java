@@ -1,4 +1,4 @@
-package com.maveric.ecommerce.customerms;
+package com.maveric.ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,8 +15,6 @@ import org.springframework.web.filter.CorsFilter;
  */
 @SpringBootApplication
 public class MyApplication {
-
-
 
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(MyApplication.class, args);
