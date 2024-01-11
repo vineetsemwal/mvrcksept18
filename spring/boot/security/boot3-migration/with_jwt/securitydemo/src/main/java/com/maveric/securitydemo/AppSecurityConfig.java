@@ -80,7 +80,6 @@ public class AppSecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         return NoOpPasswordEncoder.getInstance();
     }
 
