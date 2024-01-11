@@ -28,6 +28,7 @@ public class OrderServiceImpl implements IOrderService{
         this.orderRepo =orderRepo;
         this.orderUtil=util;
         this.productRepo=productRepo;
+        this.customerRepo=customerRepo;
 
     }
 
