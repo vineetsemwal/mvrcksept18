@@ -1,0 +1,89 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8080
+  description: "My Generated server url"
+paths:
+  /customers:
+    post:
+      tags:
+      - customer-controller
+      operationId: register
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCustomerRequest'
+        required: true
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: string
+        "200":
+          description: "Status is OK"
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/CustomerResponse'
+  /customers/{id}:
+    get:
+      tags:
+      - customer-controller
+      operationId: findById
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                type: string
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/CustomerResponse'
+components:
+  schemas:
+    CreateCustomerRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        age:
+          maximum: 100
+          minimum: 10
+          type: integer
+          format: int32
+        balance:
+          type: number
+          format: double
+    CustomerResponse:
+      type: object
+      properties:
+        customerId:
+          type: integer
+          format: int64
+        accountId:
+          type: integer
+          format: int64
+        name:
+          type: string
+        age:
+          type: integer
+          format: int32
+        balance:
+          type: number
+          format: double
