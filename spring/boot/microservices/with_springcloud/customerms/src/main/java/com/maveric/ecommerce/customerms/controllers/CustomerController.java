@@ -2,7 +2,9 @@ package com.maveric.ecommerce.customerms.controllers;
 
 import com.maveric.ecommerce.customerms.dto.CreateCustomerRequest;
 import com.maveric.ecommerce.customerms.dto.CustomerResponse;
+import com.maveric.ecommerce.customerms.dto.ProductDetails;
 import com.maveric.ecommerce.customerms.service.ICustomerService;
+import com.maveric.ecommerce.customerms.util.CustomerUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,9 +14,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class CustomerController {
     private ICustomerService service;
+    private CustomerUtil customerUtil;
 
-    public CustomerController(ICustomerService service) {
+    public CustomerController(ICustomerService service,CustomerUtil util)
+    {
         this.service = service;
+        this.customerUtil=util;
     }
 
     /*
@@ -39,6 +44,10 @@ public class CustomerController {
     }
 
 
+    @GetMapping("/product/cheapest")
+    public ProductDetails cheapestProduct(){
+        return customerUtil.fetchCheapestProduct();
+    }
 
 
 }
