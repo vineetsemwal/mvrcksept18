@@ -1,8 +1,7 @@
 import axios from "axios";
-import { act } from "react-test-renderer";
 import ReactDOM from "react-dom/client"
 import DisplayProduct from "./DisplayProduct";
-import { getByTestId, waitFor } from "@testing-library/react";
+import { getByTestId, waitFor,act } from "@testing-library/react";
 
 describe("Display Product Tests",()=>{
 jest.mock("axios");
