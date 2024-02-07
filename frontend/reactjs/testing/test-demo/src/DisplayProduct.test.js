@@ -5,6 +5,7 @@ import DisplayProduct from "./DisplayProduct";
 import { getByTestId, waitFor } from "@testing-library/react";
 
 describe("Display Product Tests",()=>{
+jest.mock("axios");
 
 let container;
 beforeEach(()=>{
